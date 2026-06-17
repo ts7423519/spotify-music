@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "id": "folder_synced_jana_nayagan",
+    "title": "Jana Nayagan Hits",
+    "desc": "Custom synced playlist featuring new hits with high-fidelity streaming.",
+    "cover": "assets/Jana-Nayagan.jpg",
+    "songs": [
+      {
+        "title": "Chella Magale",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781591380/Chella-Magale-MassTamilan.dev_osturc.mp3",
+        "cover": "assets/Jana-Nayagan.jpg",
+        "duration": "4:15"
+      },
+      {
+        "title": "Oru Pere Varalaaru",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781591369/Oru-Pere-Varalaaru-MassTamilan.dev_qru1bs.mp3",
+        "cover": "assets/Jana-Nayagan.jpg",
+        "duration": "3:58"
+      },
+      {
+        "title": "Athu Thalore",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781589017/Athu_Thalore_u149tt.mp3",
+        "cover": "assets/Jana-Nayagan.jpg",
+        "duration": "4:42"
+      }
+    ]
+  }
+]
