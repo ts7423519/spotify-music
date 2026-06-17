@@ -582,6 +582,7 @@ function navigate(viewName, folderId = null) {
   else if (viewName === "liked-detail") {
     btnLikedSongs.classList.add("active");
     setupLikedSongsHeroBanner();
+    songTableContainer.style.display = "block";
     renderSongTable(likedSongs.map(id => SONGS_DATABASE.find(s => s.id === id)), "Liked Songs");
   } 
   else if (viewName === "folder-detail" && folderId) {
@@ -592,6 +593,7 @@ function navigate(viewName, folderId = null) {
       if (sbItem) sbItem.classList.add("active-playlist");
 
       setupFolderHeroBanner(folder);
+      songTableContainer.style.display = "block";
       const folderSongs = folder.songIds.map(id => SONGS_DATABASE.find(s => s.id === id)).filter(Boolean);
       renderSongTable(folderSongs, folder.title);
     } else {
