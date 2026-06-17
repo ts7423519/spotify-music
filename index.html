@@ -1,73 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify Lite - Web Player</title>
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Spotify Lite mobile-friendly web player. Login with name and phone, verify via WhatsApp, then enjoy your custom music dashboard.">
-  
+  <meta name="description"
+    content="Spotify Lite mobile-friendly web player. Login with name and phone, verify via WhatsApp, then enjoy your custom music dashboard.">
+
   <!-- Google Fonts - Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>    <div id="login-overlay" class="login-overlay">
-      <div class="login-card">
-        <h1>Spotify Lite</h1>
-        <p class="login-intro">Enter your name and phone number. A WhatsApp verification message will be sent so you can access the app.</p>
-        <div class="login-fields">
-          <label for="login-name">Name</label>
-          <input id="login-name" type="text" placeholder="Enter your name" autocomplete="name">
-          <label for="login-phone">Phone number</label>
-          <input id="login-phone" type="tel" placeholder="Country code + number" autocomplete="tel">
-          <button id="login-send-btn" class="login-button">Send WhatsApp Verify Message</button>
-        </div>
-        <div id="otp-section" class="otp-section" style="display:none;">
-          <p id="login-message" class="login-message"></p>
-          <label for="login-code">Enter verification code</label>
-          <input id="login-code" type="text" placeholder="1234" maxlength="6" autocomplete="one-time-code">
-          <button id="verify-code-btn" class="login-button">Verify Code</button>
-        </div>
-        <p class="login-footnote">Open WhatsApp and paste the code if the app does not launch automatically.</p>
+
+<body>
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-card">
+      <h1>Spotify Lite</h1>
+      <p class="login-intro">Enter your name and phone number. A WhatsApp verification message will be sent so you can
+        access the app.</p>
+      <div class="login-fields">
+        <label for="login-name">Name</label>
+        <input id="login-name" type="text" placeholder="Enter your name" autocomplete="name">
+        <label for="login-phone">Phone number</label>
+        <input id="login-phone" type="tel" placeholder="Country code + number" autocomplete="tel">
+        <button id="login-send-btn" class="login-button">Send WhatsApp Verify Message</button>
       </div>
+      <div id="otp-section" class="otp-section" style="display:none;">
+        <p id="login-message" class="login-message"></p>
+        <label for="login-code">Enter verification code</label>
+        <input id="login-code" type="text" placeholder="1234" maxlength="6" autocomplete="one-time-code">
+        <button id="verify-code-btn" class="login-button">Verify Code</button>
+      </div>
+      <p class="login-footnote">Open WhatsApp and paste the code if the app does not launch automatically.</p>
     </div>
+  </div>
   <div class="app-container">
-    
+
     <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
       <!-- Spotify Logo -->
       <div class="logo-container">
         <svg class="spotify-logo" viewBox="0 0 2067 620" xmlns="http://www.w3.org/2000/svg">
-          <path d="M282.6 0C126.5 0 0 126.5 0 282.6c0 156.1 126.5 282.6 282.6 282.6 156.1 0 282.6-126.5 282.6-282.6C565.2 126.5 438.7 0 282.6 0zm129.5 407.7c-5.1 8.3-16 11.1-24.3 6-67.9-41.5-153.3-50.9-253.9-27.9-9.4 2.2-18.9-3.7-21.1-13.1-2.2-9.4 3.7-18.9 13.1-21.1 110-25.2 204.3-14.7 280.2 31.7 8.3 5.2 11.1 16.1 6 24.4zm34.6-76.7c-6.4 10.4-20.1 13.7-30.5 7.3-77.7-47.8-196.2-61.7-287.9-33.8-11.7 3.5-24-3.1-27.6-14.8-3.5-11.7 3.1-24 14.8-27.6 105.1-31.9 236.2-16.1 323.9 37.8 10.4 6.4 13.8 20.1 7.3 31.1zm2.3-79.6C340 186.2 160.7 180.3 56.6 211.9c-16.1 4.9-33.1-4.2-38-20.3-4.9-16.1 4.2-33.1 20.3-38 119.1-36.2 318-29.4 442.2 44.2 14.5 8.6 19.3 27.3 10.7 41.8-8.5 14.5-27.3 19.3-41.8 10.7z" fill="#1DB954"/>
-          <text x="560" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="320" fill="#FFFFFF" letter-spacing="-10">Spotify Lite</text>
+          <path
+            d="M282.6 0C126.5 0 0 126.5 0 282.6c0 156.1 126.5 282.6 282.6 282.6 156.1 0 282.6-126.5 282.6-282.6C565.2 126.5 438.7 0 282.6 0zm129.5 407.7c-5.1 8.3-16 11.1-24.3 6-67.9-41.5-153.3-50.9-253.9-27.9-9.4 2.2-18.9-3.7-21.1-13.1-2.2-9.4 3.7-18.9 13.1-21.1 110-25.2 204.3-14.7 280.2 31.7 8.3 5.2 11.1 16.1 6 24.4zm34.6-76.7c-6.4 10.4-20.1 13.7-30.5 7.3-77.7-47.8-196.2-61.7-287.9-33.8-11.7 3.5-24-3.1-27.6-14.8-3.5-11.7 3.1-24 14.8-27.6 105.1-31.9 236.2-16.1 323.9 37.8 10.4 6.4 13.8 20.1 7.3 31.1zm2.3-79.6C340 186.2 160.7 180.3 56.6 211.9c-16.1 4.9-33.1-4.2-38-20.3-4.9-16.1 4.2-33.1 20.3-38 119.1-36.2 318-29.4 442.2 44.2 14.5 8.6 19.3 27.3 10.7 41.8-8.5 14.5-27.3 19.3-41.8 10.7z"
+            fill="#1DB954" />
+          <text x="560" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="320"
+            fill="#FFFFFF" letter-spacing="-10">Spotify Lite</text>
         </svg>
       </div>
 
       <!-- Main Navigation Menu -->
       <nav class="nav-menu">
         <a href="#" class="nav-item active" id="nav-home">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
           <span>Home</span>
         </a>
         <a href="#" class="nav-item" id="nav-search-link">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
           <span>Search</span>
         </a>
         <a href="#" class="nav-item" id="nav-library">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+          </svg>
           <span>Your Library</span>
         </a>
       </nav>
 
       <!-- Sidebar Quick Search -->
       <div class="sidebar-search-container">
-        <input type="text" class="sidebar-search-input" id="sidebar-search-input" placeholder="Search songs..." autocomplete="off">
+        <input type="text" class="sidebar-search-input" id="sidebar-search-input" placeholder="Search songs..."
+          autocomplete="off">
         <button class="sidebar-search-btn" id="sidebar-search-btn" title="Search">
-          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+          </svg>
         </button>
       </div>
 
@@ -76,14 +103,22 @@
         <div class="library-header">
           <span class="section-title">Your Playlists</span>
           <button class="add-playlist-btn" id="create-folder-btn" title="Create New Library Folder">
-            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
           </button>
         </div>
-        
+
         <div class="playlist-quick-actions">
           <div class="quick-action-item" id="btn-liked-songs">
             <div class="liked-badge">
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                </path>
+              </svg>
             </div>
             <span>Liked Songs</span>
           </div>
@@ -107,19 +142,33 @@
       <header class="main-header" id="main-header">
         <div class="header-navigation">
           <button class="nav-circle-btn" id="header-back-btn" title="Go Back">
-            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
           </button>
           <button class="nav-circle-btn" id="header-forward-btn" title="Go Forward" disabled>
-            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
           </button>
         </div>
 
         <!-- Central Search Bar -->
         <div class="search-bar-container">
-          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
           <input type="text" id="search-input" placeholder="Search songs, folders..." autocomplete="off">
           <button class="search-submit-btn" id="search-btn" title="Search">
-            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+            </svg>
           </button>
           <button class="clear-search-btn" id="clear-search" style="display: none;">&times;</button>
         </div>
@@ -129,20 +178,24 @@
           <div class="user-avatar">SL</div>
           <span class="user-name" id="user-name-display">Guest</span>
           <button id="logout-btn" class="logout-btn" title="Logout">Logout</button>
-          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" class="dropdown-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            class="dropdown-chevron">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
         </div>
       </header>
 
       <!-- Scrollable Main Container -->
       <div class="scroll-container" id="scroll-container">
-        
+
         <!-- Hero Playlist Banner (Hidden on Dashboard, visible in Folder/Liked detail views) -->
         <section class="hero-banner" id="hero-banner" style="display: none;">
           <div class="hero-bg-overlay"></div>
           <div class="hero-content">
             <span class="playlist-tag">FOLDER PLAYLIST</span>
             <h1 class="playlist-title" id="hero-title">Bison Folk Hits</h1>
-            <p class="playlist-desc" id="hero-desc">Curated local acoustic releases and high-energy rural rhythm sets.</p>
+            <p class="playlist-desc" id="hero-desc">Curated local acoustic releases and high-energy rural rhythm sets.
+            </p>
             <div class="playlist-meta">
               <span class="meta-owner" id="hero-owner">Spotify Lite</span>
               <span class="meta-dot"></span>
@@ -150,10 +203,16 @@
             </div>
             <div class="hero-actions">
               <button class="play-playlist-btn" id="hero-play-btn" title="Play Playlist">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
               </button>
               <button class="hero-secondary-btn" id="hero-fav-btn" style="display: none;">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
               </button>
             </div>
           </div>
@@ -193,14 +252,20 @@
         </div>
 
         <!-- Library View (Grid of folders) -->
-        <section class="library-section" id="library-view-container" style="display: none; padding: 80px 32px 24px 32px;">
+        <section class="library-section" id="library-view-container"
+          style="display: none; padding: 80px 32px 24px 32px;">
           <div class="section-header-row">
             <div>
               <h2 class="section-title-normal" style="font-size: 24px; margin-bottom: 4px;">Music Library</h2>
-              <p style="color: var(--text-muted); font-size: 14px;">Organize your local audio files in folder compartments</p>
+              <p style="color: var(--text-muted); font-size: 14px;">Organize your local audio files in folder
+                compartments</p>
             </div>
             <button class="create-folder-main-btn" id="create-folder-btn-main">
-              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" style="margin-right: 8px;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+                style="margin-right: 8px;">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
               New Folder
             </button>
           </div>
@@ -212,7 +277,8 @@
         <!-- Song List Table Section (Inside playlist/folder/search details) -->
         <section class="song-table-section" id="song-table-container" style="display: none;">
           <!-- Folder Info Card for Header (if not using Hero Banner) -->
-          <div id="folder-breadcrumb" style="display: none; margin-bottom: 20px; font-size: 13px; font-weight: 600; color: var(--text-muted);">
+          <div id="folder-breadcrumb"
+            style="display: none; margin-bottom: 20px; font-size: 13px; font-weight: 600; color: var(--text-muted);">
             Library &gt; <span id="breadcrumb-folder-name" style="color: var(--text-main);">Folder</span>
           </div>
 
@@ -222,7 +288,10 @@
                 <th class="col-num">#</th>
                 <th class="col-title">Title</th>
                 <th class="col-duration">
-                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                 </th>
               </tr>
             </thead>
@@ -230,9 +299,12 @@
               <!-- Song rows generated dynamically by app.js -->
             </tbody>
           </table>
-          
+
           <div class="empty-search-state" id="empty-search" style="display: none;">
-            <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
             <h3>No results found for "<span id="search-query-text"></span>"</h3>
             <p>Make sure the title or artist name is spelled correctly.</p>
           </div>
@@ -292,7 +364,7 @@
           </div>
           <div class="footer-divider"></div>
           <div class="footer-copyright">
-            <p id="footer-credit">&copy; 2026 Spotify Lite. Crafted for Guest.</p>
+            <p id="footer-credit">&copy; 2026 Spotify Lite. Crafted for Tamil Selvan.</p>
           </div>
         </footer>
 
@@ -313,7 +385,12 @@
           <p class="track-artist" id="player-track-artist">Select a track to start</p>
         </div>
         <button class="track-fav-btn" id="player-fav-btn" title="Save to Liked Songs">
-          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" id="fav-icon-svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            id="fav-icon-svg">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
+          </svg>
         </button>
       </div>
 
@@ -321,24 +398,47 @@
       <div class="player-controls-container">
         <div class="control-buttons">
           <button class="player-control-btn" id="shuffle-btn" title="Enable Shuffle">
-            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 3 21 3 21 8"></polyline>
+              <line x1="4" y1="20" x2="21" y2="3"></line>
+              <polyline points="21 16 21 21 16 21"></polyline>
+              <line x1="15" y1="15" x2="21" y2="21"></line>
+              <line x1="4" y1="4" x2="9" y2="9"></line>
+            </svg>
           </button>
-          
+
           <button class="player-control-btn" id="prev-btn" title="Previous Track">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><polygon points="19 20 9 12 19 4 19 20"></polygon><rect x="5" y="4" width="2" height="16"></rect></svg>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <polygon points="19 20 9 12 19 4 19 20"></polygon>
+              <rect x="5" y="4" width="2" height="16"></rect>
+            </svg>
           </button>
-          
+
           <button class="play-pause-btn" id="play-pause-btn" title="Play">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" id="play-icon"><path d="M8 5v14l11-7z"></path></svg>
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" id="pause-icon" style="display: none;"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" id="play-icon">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" id="pause-icon" style="display: none;">
+              <rect x="6" y="4" width="4" height="16"></rect>
+              <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
           </button>
-          
+
           <button class="player-control-btn" id="next-btn" title="Next Track">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4"></polygon><rect x="17" y="4" width="2" height="16"></rect></svg>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <polygon points="5 4 15 12 5 20 5 4"></polygon>
+              <rect x="17" y="4" width="2" height="16"></rect>
+            </svg>
           </button>
-          
+
           <button class="player-control-btn" id="repeat-btn" title="Enable Repeat (Off)">
-            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23 3 19 7 15"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14M7 23 3 19 7 15"></path>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+            </svg>
             <span class="repeat-badge" id="repeat-badge" style="display: none;">1</span>
           </button>
         </div>
@@ -358,19 +458,35 @@
       <!-- Player Volume & Utility (Right) -->
       <div class="player-utility-container">
         <button class="utility-btn" title="Toggle Visualizer & Lyrics" id="lyrics-toggle">
-          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+          </svg>
         </button>
-        
+
         <div class="volume-control-wrapper">
           <button class="utility-btn" id="volume-btn" title="Mute">
             <!-- Max Volume SVG -->
-            <svg id="vol-high" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <svg id="vol-high" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+              fill="none">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
             <!-- Low Volume SVG (hidden by default) -->
-            <svg id="vol-low" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" style="display: none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <svg id="vol-low" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+              fill="none" style="display: none;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
             <!-- Mute SVG (hidden by default) -->
-            <svg id="vol-mute" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" style="display: none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+            <svg id="vol-mute" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+              fill="none" style="display: none;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
           </button>
-          
+
           <div class="volume-slider-container">
             <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.7" class="custom-range">
             <div class="volume-track" id="volume-track"></div>
@@ -385,4 +501,5 @@
   <!-- Audio Player Core Script -->
   <script src="app.js"></script>
 </body>
+
 </html>

@@ -315,18 +315,45 @@ function saveUserState() {
 }
 
 function loadUserState() {
-  const storedUser = localStorage.getItem("spotify_lite_user");
-  if (storedUser) {
-    try {
-      currentUser = JSON.parse(storedUser);
-    } catch (error) {
-      currentUser = { name: "Guest", phone: "", verified: false };
+  // Check URL parameters for WhatsApp verification redirect link
+  const urlParams = new URLSearchParams(window.location.search);
+  const isVerifiedParam = urlParams.get("verified");
+  const nameParam = urlParams.get("name");
+  const phoneParam = urlParams.get("phone");
+
+  if (isVerifiedParam === "true" && nameParam && phoneParam) {
+    currentUser = {
+      name: nameParam,
+      phone: phoneParam,
+      verified: true
+    };
+    saveUserState();
+    
+    // Clean up URL query parameters so they don't stay in the address bar
+    const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    window.history.replaceState({}, document.title, cleanUrl);
+    
+    // Show verified message
+    if (loginMessage) {
+      loginMessage.textContent = "Verified successfully — welcome to Spotify Lite!";
+    }
+  } else {
+    const storedUser = localStorage.getItem("spotify_lite_user");
+    if (storedUser) {
+      try {
+        currentUser = JSON.parse(storedUser);
+      } catch (error) {
+        currentUser = { name: "Guest", phone: "", verified: false };
+      }
     }
   }
+  
   if (!currentUser || typeof currentUser !== "object") {
     currentUser = { name: "Guest", phone: "", verified: false };
   }
+  
   updateUserUI();
+  
   if (!currentUser.verified) {
     showLoginOverlay();
   } else {
@@ -407,10 +434,22 @@ function sendWhatsAppVerification() {
   updateUserUI();
 
   pendingVerificationCode = generateVerificationCode();
-  loginMessage.textContent = `WhatsApp verification code ${pendingVerificationCode} is ready. Please open WhatsApp and enter it below.`;
+  
+  // Construct the verification redirect link
+  const verificationUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?verified=true&name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}`;
+  
+  loginMessage.textContent = `Verification link with code ${pendingVerificationCode} is ready. Click below to simulate or send.`;
+  
+  // Update the simulation anchor href
+  const simLink = document.getElementById("whatsapp-sim-link");
+  if (simLink) {
+    simLink.href = verificationUrl;
+  }
+  
   otpSection.style.display = "grid";
 
-  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(`Spotify Lite verification code: ${pendingVerificationCode}`)}`;
+  const messageText = `Verify your Spotify Lite login by clicking this link: ${verificationUrl} (Code: ${pendingVerificationCode})`;
+  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(messageText)}`;
   window.open(whatsappUrl, "_blank");
 }
 
