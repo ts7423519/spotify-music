@@ -248,9 +248,77 @@ const headerForwardBtn = document.getElementById("header-forward-btn");
 /* ==========================================================================
    Initialization & Storage Logic
    ========================================================================== */
-function init() {
+async function loadExternalSongs() {
+  try {
+    const response = await fetch("songs.json");
+    if (!response.ok) {
+      console.log("No synced songs database (songs.json) found.");
+      return;
+    }
+    const syncedAlbums = await response.json();
+    if (!Array.isArray(syncedAlbums)) return;
+
+    syncedAlbums.forEach(album => {
+      const folderId = album.id || `folder_synced_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+      
+      // Check if folder is already present in memory
+      let existingFolder = folders.find(f => f.id === folderId);
+      const songIds = [];
+
+      if (album.songs && Array.isArray(album.songs)) {
+        album.songs.forEach(song => {
+          let existingSong = SONGS_DATABASE.find(s => s.url === song.url);
+          if (!existingSong) {
+            // Find max ID in SONGS_DATABASE to assign next number
+            const maxId = SONGS_DATABASE.reduce((max, s) => s.id > max ? s.id : max, -1);
+            const newId = maxId + 1;
+            
+            existingSong = {
+              id: newId,
+              title: song.title || "Unknown Title",
+              artist: song.artist || "Unknown Artist",
+              url: song.url,
+              cover: song.cover || "assets/bison image.jpg",
+              duration: song.duration || "3:00",
+              lyrics: song.lyrics || [
+                { time: 0, text: `♪ Synced track from album: ${album.title} ♪` },
+                { time: 5, text: `Playing: ${song.title}` },
+                { time: 15, text: `Artist: ${song.artist}` },
+                { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+              ]
+            };
+            SONGS_DATABASE.push(existingSong);
+          }
+          songIds.push(existingSong.id);
+        });
+      }
+
+      if (existingFolder) {
+        // Merge song lists to avoid duplicates in the same folder
+        existingFolder.songIds = [...new Set([...existingFolder.songIds, ...songIds])];
+      } else {
+        const newFolder = {
+          id: folderId,
+          title: album.title || "Synced Album",
+          desc: album.desc || "Automatically synced from MassTamilan & Cloudinary.",
+          cover: album.cover || "assets/bison image.jpg",
+          songIds: songIds
+        };
+        folders.push(newFolder);
+      }
+    });
+
+    // Save back to storage so the folder structure is persisted
+    saveFoldersToStorage();
+  } catch (error) {
+    console.warn("Could not load or parse songs.json:", error);
+  }
+}
+
+async function init() {
   loadLocalStorage();
   loadUserState();
+  await loadExternalSongs();
   setupEventListeners();
   updateVolumeSliders(audio.volume);
   
