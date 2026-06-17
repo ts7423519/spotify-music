@@ -150,6 +150,8 @@ let isRepeat = 0; // 0 = off, 1 = repeat playlist, 2 = repeat track
 let currentView = "home"; // home, search, library, folder-detail, liked-detail
 let activeFolderId = null; // Currently open folder detail ID
 let searchTimeout = null;
+let currentUser = { name: "Guest", phone: "", verified: false };
+let pendingVerificationCode = null;
 
 // History Navigation
 const viewHistory = ["home"];
@@ -192,6 +194,21 @@ const playerFavBtn = document.getElementById("player-fav-btn");
 const sidebarArtImg = document.getElementById("sidebar-art-img");
 const sidebarArtGlow = document.getElementById("sidebar-art-glow");
 
+// Login Elements
+const loginOverlay = document.getElementById("login-overlay");
+const loginNameInput = document.getElementById("login-name");
+const loginPhoneInput = document.getElementById("login-phone");
+const loginSendBtn = document.getElementById("login-send-btn");
+const otpSection = document.getElementById("otp-section");
+const loginMessage = document.getElementById("login-message");
+const loginCodeInput = document.getElementById("login-code");
+const verifyCodeBtn = document.getElementById("verify-code-btn");
+const userNameDisplay = document.getElementById("user-name-display");
+const welcomeName = document.getElementById("welcome-name");
+const footerCredit = document.getElementById("footer-credit");
+const userAvatar = document.querySelector(".user-avatar");
+const logoutBtn = document.getElementById("logout-btn");
+
 // Volume Controls
 const volumeBtn = document.getElementById("volume-btn");
 const volumeSlider = document.getElementById("volume-slider");
@@ -233,6 +250,7 @@ const headerForwardBtn = document.getElementById("header-forward-btn");
    ========================================================================== */
 function init() {
   loadLocalStorage();
+  loadUserState();
   setupEventListeners();
   updateVolumeSliders(audio.volume);
   
@@ -290,6 +308,128 @@ function saveFoldersToStorage() {
 
 function saveLikesToStorage() {
   localStorage.setItem("spotify_liked_songs", JSON.stringify(likedSongs));
+}
+
+function saveUserState() {
+  localStorage.setItem("spotify_lite_user", JSON.stringify(currentUser));
+}
+
+function loadUserState() {
+  const storedUser = localStorage.getItem("spotify_lite_user");
+  if (storedUser) {
+    try {
+      currentUser = JSON.parse(storedUser);
+    } catch (error) {
+      currentUser = { name: "Guest", phone: "", verified: false };
+    }
+  }
+  if (!currentUser || typeof currentUser !== "object") {
+    currentUser = { name: "Guest", phone: "", verified: false };
+  }
+  updateUserUI();
+  if (!currentUser.verified) {
+    showLoginOverlay();
+  } else {
+    hideLoginOverlay();
+  }
+}
+
+function showLoginOverlay() {
+  if (loginOverlay) {
+    loginOverlay.style.display = "flex";
+  }
+}
+
+function hideLoginOverlay() {
+  if (loginOverlay) {
+    loginOverlay.style.display = "none";
+  }
+}
+
+function updateUserUI() {
+  const name = currentUser.name ? currentUser.name : "Guest";
+  const initials = getInitials(name);
+  if (userAvatar) userAvatar.textContent = initials;
+  if (userNameDisplay) userNameDisplay.textContent = name;
+  if (welcomeName) welcomeName.textContent = name;
+  if (footerCredit) footerCredit.textContent = `© 2026 Spotify Lite. Crafted for ${name}.`;
+  if (currentUser.verified && currentUser.phone) {
+    loginPhoneInput.value = currentUser.phone;
+  }
+}
+
+function logoutUser() {
+  currentUser = { name: "Guest", phone: "", verified: false };
+  saveUserState();
+  updateUserUI();
+  loginNameInput.value = "";
+  loginPhoneInput.value = "";
+  loginCodeInput.value = "";
+  otpSection.style.display = "none";
+  loginMessage.textContent = "You have been logged out. Please sign in again to continue.";
+  showLoginOverlay();
+}
+
+function getInitials(name) {
+  if (!name) return "GL";
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return "GL";
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+  return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
+}
+
+function normalizePhoneNumber(value) {
+  if (!value) return "";
+  return value.replace(/[^0-9]/g, "");
+}
+
+function generateVerificationCode() {
+  return String(Math.floor(1000 + Math.random() * 9000));
+}
+
+function sendWhatsAppVerification() {
+  const name = loginNameInput.value.trim();
+  const phone = normalizePhoneNumber(loginPhoneInput.value);
+
+  if (!name) {
+    loginMessage.textContent = "Please enter your name.";
+    return;
+  }
+  if (!phone || phone.length < 8) {
+    loginMessage.textContent = "Please enter a valid phone number with country code.";
+    return;
+  }
+
+  currentUser.name = name;
+  currentUser.phone = phone;
+  currentUser.verified = false;
+  saveUserState();
+  updateUserUI();
+
+  pendingVerificationCode = generateVerificationCode();
+  loginMessage.textContent = `WhatsApp verification code ${pendingVerificationCode} is ready. Please open WhatsApp and enter it below.`;
+  otpSection.style.display = "grid";
+
+  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(`Spotify Lite verification code: ${pendingVerificationCode}`)}`;
+  window.open(whatsappUrl, "_blank");
+}
+
+function verifyLoginCode() {
+  const enteredCode = loginCodeInput.value.trim();
+  if (!enteredCode) {
+    loginMessage.textContent = "Enter the verification code from WhatsApp.";
+    return;
+  }
+  if (enteredCode === pendingVerificationCode) {
+    currentUser.verified = true;
+    saveUserState();
+    updateUserUI();
+    hideLoginOverlay();
+    loginMessage.textContent = "Verified successfully — welcome to Spotify Lite!";
+    loginCodeInput.value = "";
+  } else {
+    loginMessage.textContent = "The code did not match. Please try again.";
+  }
 }
 
 /* ==========================================================================
@@ -423,7 +563,7 @@ function setupLikedSongsHeroBanner() {
   document.getElementById("hero-title").textContent = "Liked Songs";
   document.getElementById("hero-desc").textContent = "Your customized collection of liked folk hits.";
   document.getElementById("hero-song-count").textContent = `${likedSongs.length} songs`;
-  document.getElementById("hero-owner").textContent = "Tamil Selvan";
+  document.getElementById("hero-owner").textContent = currentUser.name || "Spotify Lite";
   
   // Dark blue heart-shaped gradient theme
   document.documentElement.style.setProperty("--active-accent-color", "69, 10, 245");
@@ -1185,6 +1325,28 @@ function setupEventListeners() {
       toggleLike(currentPlaying.id);
     }
   });
+
+  // Login actions
+  if (loginSendBtn) {
+    loginSendBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      sendWhatsAppVerification();
+    });
+  }
+
+  if (verifyCodeBtn) {
+    verifyCodeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      verifyLoginCode();
+    });
+  }
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      logoutUser();
+    });
+  }
 
   // Folder banner big play action
   document.getElementById("hero-play-btn").addEventListener("click", () => {
