@@ -319,6 +319,7 @@ async function init() {
   loadLocalStorage();
   loadUserState();
   await loadExternalSongs();
+  await loadCloudinaryConfig();
   setupEventListeners();
   updateVolumeSliders(audio.volume);
   
@@ -548,6 +549,9 @@ function navigate(viewName, folderId = null) {
   libraryView.style.display = "none";
   songTableContainer.style.display = "none";
   heroBanner.style.display = "none";
+  
+  const mcpSection = document.getElementById("mcp-search-section");
+  if (mcpSection) mcpSection.style.display = "none";
   
   currentView = viewName;
   activeFolderId = folderId;
@@ -1289,13 +1293,231 @@ function toggleLike(songId) {
 /* ==========================================================================
    Search Functionality
    ========================================================================== */
+// MCP Cloud Config state
+let mcpCloudConfig = { cloud_name: "", upload_preset: "" };
+
+async function loadCloudinaryConfig() {
+  try {
+    const res = await fetch("/api/config");
+    if (res.ok) {
+      mcpCloudConfig = await res.json();
+      const cnInput = document.getElementById("mcp-cloud-name");
+      const upInput = document.getElementById("mcp-upload-preset");
+      if (cnInput && mcpCloudConfig.cloud_name) cnInput.value = mcpCloudConfig.cloud_name;
+      if (upInput && mcpCloudConfig.upload_preset) upInput.value = mcpCloudConfig.upload_preset;
+    }
+  } catch (err) {
+    console.warn("Could not load Cloudinary config:", err);
+  }
+}
+
+async function saveCloudinaryConfig() {
+  const cnVal = document.getElementById("mcp-cloud-name").value;
+  const upVal = document.getElementById("mcp-upload-preset").value;
+  const cloud_name = cnVal ? cnVal.trim() : "";
+  const upload_preset = upVal ? upVal.trim() : "";
+  
+  const statusEl = document.getElementById("mcp-config-status");
+  if (!statusEl) return;
+  statusEl.textContent = "";
+  statusEl.style.color = "#1db954";
+
+  if (!cloud_name || !upload_preset) {
+    statusEl.textContent = "Please fill in all config fields.";
+    statusEl.style.color = "#ff5555";
+    return;
+  }
+
+  mcpCloudConfig = { cloud_name, upload_preset };
+
+  try {
+    const res = await fetch("/api/config", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(mcpCloudConfig)
+    });
+    if (res.ok) {
+      statusEl.textContent = "Configuration saved successfully!";
+      setTimeout(() => { statusEl.textContent = ""; }, 3000);
+    } else {
+      statusEl.textContent = "Failed to save configuration.";
+      statusEl.style.color = "#ff5555";
+    }
+  } catch (err) {
+    statusEl.textContent = "Server communication error.";
+    statusEl.style.color = "#ff5555";
+  }
+}
+
+async function performMcpSearch(query) {
+  const mcpSection = document.getElementById("mcp-search-section");
+  const catalogBody = document.getElementById("mcp-catalog-list-body");
+  
+  if (!mcpSection || !catalogBody) return;
+
+  const url = query ? `/api/search?q=${encodeURIComponent(query)}` : "/api/latest";
+  
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      mcpSection.style.display = "none";
+      return;
+    }
+    const albums = await res.json();
+    if (albums.error) {
+      catalogBody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: #ff5555; padding: 20px 0;">Error: ${albums.error}</td></tr>`;
+      mcpSection.style.display = "block";
+      return;
+    }
+    
+    if (!Array.isArray(albums) || albums.length === 0) {
+      if (query) {
+        catalogBody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: var(--text-muted); padding: 20px 0;">No matching albums in cloud catalog.</td></tr>`;
+        mcpSection.style.display = "block";
+      } else {
+        mcpSection.style.display = "none";
+      }
+      return;
+    }
+
+    renderMcpCatalog(albums);
+    mcpSection.style.display = "block";
+  } catch (err) {
+    console.warn("MCP search failed:", err);
+    mcpSection.style.display = "none";
+  }
+}
+
+function renderMcpCatalog(albums) {
+  const catalogBody = document.getElementById("mcp-catalog-list-body");
+  if (!catalogBody) return;
+  catalogBody.innerHTML = "";
+
+  albums.forEach((album, index) => {
+    const row = document.createElement("tr");
+    row.className = "song-row";
+    
+    // Match titles
+    const isSynced = folders.some(f => f.title.toLowerCase() === album.title.toLowerCase());
+    
+    row.innerHTML = `
+      <td class="col-num">${index + 1}</td>
+      <td class="col-title">
+        <div class="title-cell-content">
+          <div class="title-text-group">
+            <span class="table-song-title" style="color: #fff; font-weight:600;">${album.title}</span>
+            <span class="table-song-artist" style="font-size:11px;">Starring: ${album.starring || "N/A"} | Music: ${album.music_director || "N/A"}</span>
+          </div>
+        </div>
+      </td>
+      <td class="col-duration" style="text-align: center;">
+        ${isSynced ? `
+          <span style="color:#1db954; font-weight:700; font-size:12px; display: inline-flex; align-items: center; gap: 4px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Synced
+          </span>
+        ` : `
+          <button class="create-folder-main-btn sync-btn" data-link="${album.source}" data-title="${album.title}" style="padding: 6px 12px; font-size: 11px; background: #1db954; color: #000; font-weight:700; cursor: pointer; border:none; border-radius:20px; transition: transform 0.2s;">
+            Sync & Play
+          </button>
+        `}
+      </td>
+    `;
+
+    const syncBtn = row.querySelector(".sync-btn");
+    if (syncBtn) {
+      syncBtn.addEventListener("click", () => {
+        const link = syncBtn.dataset.link;
+        const title = syncBtn.dataset.title;
+        syncAlbumFromMcp(link, title, syncBtn);
+      });
+    }
+
+    catalogBody.appendChild(row);
+  });
+}
+
+async function syncAlbumFromMcp(albumLink, albumTitle, btnElement) {
+  const cnVal = document.getElementById("mcp-cloud-name").value;
+  const upVal = document.getElementById("mcp-upload-preset").value;
+  const cloud_name = (mcpCloudConfig.cloud_name || cnVal || "").trim();
+  const upload_preset = (mcpCloudConfig.upload_preset || upVal || "").trim();
+
+  if (!cloud_name || !upload_preset) {
+    alert("Please enter and save your Cloudinary credentials (Cloud Name & Upload Preset) first before syncing songs!");
+    document.getElementById("mcp-config-panel").style.display = "block";
+    return;
+  }
+
+  const banner = document.getElementById("mcp-sync-status-banner");
+  const bannerText = document.getElementById("mcp-sync-status-text");
+  
+  if (banner && bannerText) {
+    banner.style.display = "flex";
+    bannerText.textContent = `Syncing "${albumTitle}" from MassTamilan catalog to your Cloudinary storage...`;
+  }
+
+  btnElement.disabled = true;
+  btnElement.textContent = "Syncing...";
+  btnElement.style.background = "#555";
+  btnElement.style.color = "#aaa";
+
+  try {
+    const res = await fetch("/api/sync", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        album_link: albumLink,
+        cloud_name: cloud_name,
+        upload_preset: upload_preset
+      })
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      if (bannerText) bannerText.textContent = `Success! Synced ${data.songs_count} songs. Loading playlist...`;
+      
+      await loadExternalSongs();
+      renderFolders();
+      renderSidebarFolders();
+      
+      setTimeout(() => {
+        if (banner) banner.style.display = "none";
+        const newFolder = folders.find(f => f.title.toLowerCase() === albumTitle.toLowerCase());
+        if (newFolder) {
+          navigate("folder-detail", newFolder.id);
+          playFolderSongs(newFolder.id);
+        } else {
+          navigate("library");
+        }
+      }, 1500);
+
+    } else {
+      const errData = await res.json();
+      alert(`Sync Failed: ${errData.error || "Server error occurred during sync"}`);
+      resetSyncButton(btnElement, banner);
+    }
+  } catch (err) {
+    alert(`Sync Failed: Server communication error.`);
+    resetSyncButton(btnElement, banner);
+  }
+}
+
+function resetSyncButton(btn, banner) {
+  if (banner) banner.style.display = "none";
+  btn.disabled = false;
+  btn.textContent = "Sync & Play";
+  btn.style.background = "#1db954";
+  btn.style.color = "#000";
+}
+
 function performSearch(query) {
   emptySearchState.style.display = "none";
   document.querySelector(".song-table").style.display = "table";
   
   if (!query) {
-    // If search is empty, display all tracks in database as suggestions
     renderSongTable(SONGS_DATABASE, "All Songs");
+    performMcpSearch("");
     return;
   }
   
@@ -1311,6 +1533,8 @@ function performSearch(query) {
     emptySearchState.style.display = "block";
     searchQueryText.textContent = query;
   }
+
+  performMcpSearch(query);
 }
 
 /* ==========================================================================
@@ -1603,6 +1827,25 @@ function setupEventListeners() {
 
   createFolderBtnSidebar.addEventListener("click", handleCreateFolder);
   createFolderBtnMain.addEventListener("click", handleCreateFolder);
+
+  // MCP config panel toggle & save listeners
+  const mcpConfigBtn = document.getElementById("mcp-config-btn");
+  const mcpConfigPanel = document.getElementById("mcp-config-panel");
+  const mcpSaveConfigBtn = document.getElementById("mcp-save-config-btn");
+
+  if (mcpConfigBtn && mcpConfigPanel) {
+    mcpConfigBtn.addEventListener("click", () => {
+      const shown = mcpConfigPanel.style.display === "block";
+      mcpConfigPanel.style.display = shown ? "none" : "block";
+    });
+  }
+
+  if (mcpSaveConfigBtn) {
+    mcpSaveConfigBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      saveCloudinaryConfig();
+    });
+  }
 
   // Scrolled header state
   scrollContainer.addEventListener("scroll", () => {
