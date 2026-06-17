@@ -182,6 +182,187 @@ const SONGS_DATABASE = [
       { time: 65, text: "♪ (Flute Interlude) ♪" },
       { time: 90, text: "Thoongadha nenjil thoorum anbaey..." }
     ]
+  },
+  {
+    id: 9,
+    title: "Karuppa Kooda Va",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781589016/Karuppa_Kooda_Va_nrshhx.mp3",
+    cover: "assets/photo 1.jpg",
+    duration: "4:20",
+    lyrics: [
+      { time: 0, text: "♪ (Karuppa Kooda Va Intro) ♪" },
+      { time: 15, text: "Karuppa kooda va, manadhil adiyiyasi..." },
+      { time: 35, text: "Ooradi karuppu thaalam, kaathirundhu va..." },
+      { time: 55, text: "♪ (Powerful Chorus) ♪" },
+      { time: 80, text: "Unna paartha neram, kulir thrownu paatha..." }
+    ]
+  },
+  {
+    id: 10,
+    title: "Verappa",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588999/Verappa_xxktoz.mp3",
+    cover: "assets/photo 1.jpg",
+    duration: "3:52",
+    lyrics: [
+      { time: 0, text: "♪ (Verappa Beat Intro) ♪" },
+      { time: 12, text: "Verappa naan pathi paattu kettaya..." },
+      { time: 30, text: "Kaalam varum pothu, adhu pondru vere..." },
+      { time: 48, text: "♪ (Hook) ♪" },
+      { time: 70, text: "Un kannil verithanam, ennai kalangatha..." }
+    ]
+  },
+  {
+    id: 11,
+    title: "Verappa - Extended",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588994/Verappa_-_Extended_y7sk2d.mp3",
+    cover: "assets/photo 1.jpg",
+    duration: "5:05",
+    lyrics: [
+      { time: 0, text: "♪ (Extended Verappa Intro) ♪" },
+      { time: 18, text: "Verappa extended dhaan, saayaatha thaalam..." },
+      { time: 40, text: "Kurai illai, azhagu illai, idhu oru kural..." },
+      { time: 65, text: "♪ (Extended Bridge) ♪" },
+      { time: 95, text: "Thunaiyae verappi, adutha tharam..." }
+    ]
+  },
+  {
+    id: 12,
+    title: "God Mode",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588976/God_Mode_fneyun.mp3",
+    cover: "assets/photo 1.jpg",
+    duration: "4:30",
+    lyrics: [
+      { time: 0, text: "♪ (God Mode Power Intro) ♪" },
+      { time: 16, text: "God mode on, naam ellam ready ah..." },
+      { time: 38, text: "Yaarum thadukka mudiyadhu, un peyar solra..." },
+      { time: 62, text: "♪ (God Mode Chorus) ♪" },
+      { time: 88, text: "Thirumbi paaka maaten, ennai thadipathalla..." }
+    ]
+  },
+  {
+    id: 13,
+    title: "Naanga Naalu Peru",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588973/Naanga_Naalu_Peru_sybigu.mp3",
+    cover: "assets/photo 1.jpg",
+    duration: "4:10",
+    lyrics: [
+      { time: 0, text: "♪ (Naanga Naalu Peru Intro) ♪" },
+      { time: 14, text: "Naanga naalu peru, pasanga kootam..." },
+      { time: 36, text: "Vetri kaalathula naam, thunai irrupom..." },
+      { time: 58, text: "♪ (Celebration Chorus) ♪" },
+      { time: 82, text: "Saththu kettuchu, pati kettuchu..." }
+    ]
+  },
+  {
+    id: 14,
+    title: "God Mode Begins",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588955/God_Mode_Begins_wubfbj.mp3",
+    cover: "assets/photo 1.jpg",
+    duration: "4:25",
+    lyrics: [
+      { time: 0, text: "♪ (God Mode Begins Intro) ♪" },
+      { time: 20, text: "God mode begins, race start agudhu..." },
+      { time: 44, text: "Enna panni solla, naan ready-nu..." },
+      { time: 70, text: "♪ (Anthem Bridge) ♪" },
+      { time: 98, text: "Kaalam kaatanum, naam eduthukkalam..." }
+    ]
+  },
+  {
+    id: 15,
+    title: "Yumabaibesa",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781679832/Yumabaibesa_kwtsdp.mp3",
+    cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+    duration: "3:52",
+    lyrics: [
+      { time: 0, text: "♪ (Yumabaibesa Intro) ♪" },
+      { time: 10, text: "Playing Yumabaibesa..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 16,
+    title: "Oorum Blood",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781679818/Oorum_Blood_cgduor.mp3",
+    cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+    duration: "4:05",
+    lyrics: [
+      { time: 0, text: "♪ (Oorum Blood Intro) ♪" },
+      { time: 10, text: "Playing Oorum Blood..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 17,
+    title: "Kannukulla Reprise",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781679812/Kannukulla_Reprise_uehcko.mp3",
+    cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+    duration: "3:35",
+    lyrics: [
+      { time: 0, text: "♪ (Kannukulla Reprise Intro) ♪" },
+      { time: 10, text: "Playing Kannukulla Reprise..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 18,
+    title: "Yumabaibesa - Alternate",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781679807/Yumabaibesa_jux7oo.mp3",
+    cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+    duration: "3:42",
+    lyrics: [
+      { time: 0, text: "♪ (Yumabaibesa Alt Intro) ♪" },
+      { time: 10, text: "Playing Yumabaibesa Alternate..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 19,
+    title: "Singari",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781679799/Singari_uwabi3.mp3",
+    cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+    duration: "4:18",
+    lyrics: [
+      { time: 0, text: "♪ (Singari Intro) ♪" },
+      { time: 10, text: "Playing Singari..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 20,
+    title: "Nallaru Po",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781679779/Nallaru_Po_ohayjz.mp3",
+    cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+    duration: "3:55",
+    lyrics: [
+      { time: 0, text: "♪ (Nallaru Po Intro) ♪" },
+      { time: 10, text: "Playing Nallaru Po..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 21,
+    title: "Oorum Blood Unplugged",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781679756/Oorum_Blood_Unplugged_zubg8r.mp3",
+    cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+    duration: "4:22",
+    lyrics: [
+      { time: 0, text: "♪ (Oorum Blood Unplugged Intro) ♪" },
+      { time: 10, text: "Playing Oorum Blood Unplugged..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
   }
 ];
 
@@ -190,14 +371,15 @@ let folders = []; // Music folders (representing categories/playlists)
 let likedSongs = []; // Array of song IDs that are liked
 let activeQueue = []; // Currently playing list of song objects
 let currentQueueIndex = 0;
+let slits = []; // array of song IDs shown in the slits UI
+let playedSlits = []; // song IDs that were tapped and should be hidden
 let isPlaying = false;
 let isShuffle = false;
 let isRepeat = 0; // 0 = off, 1 = repeat playlist, 2 = repeat track
 let currentView = "home"; // home, search, library, folder-detail, liked-detail
 let activeFolderId = null; // Currently open folder detail ID
 let searchTimeout = null;
-let currentUser = { name: "Guest", phone: "", verified: false };
-let pendingVerificationCode = null;
+let currentUser = { name: "Guest", verified: false };
 
 // History Navigation
 const viewHistory = ["home"];
@@ -216,12 +398,18 @@ const songTableContainer = document.getElementById("song-table-container");
 const heroBanner = document.getElementById("hero-banner");
 const songListBody = document.getElementById("song-list-body");
 const extraFeaturesSection = document.getElementById("extra-features-section");
+const slitsContainer = document.getElementById("slits-container");
 
 // Navigation Sidebar links
 const navHome = document.getElementById("nav-home");
 const navSearchLink = document.getElementById("nav-search-link");
 const navLibrary = document.getElementById("nav-library");
 const btnLikedSongs = document.getElementById("btn-liked-songs");
+
+// Mobile Bottom Navigation Links
+const mobileNavHome = document.getElementById("mobile-nav-home");
+const mobileNavSearch = document.getElementById("mobile-nav-search");
+const mobileNavLibrary = document.getElementById("mobile-nav-library");
 
 // Bottom Player Controllers
 const playPauseBtn = document.getElementById("play-pause-btn");
@@ -243,12 +431,7 @@ const sidebarArtGlow = document.getElementById("sidebar-art-glow");
 // Login Elements
 const loginOverlay = document.getElementById("login-overlay");
 const loginNameInput = document.getElementById("login-name");
-const loginPhoneInput = document.getElementById("login-phone");
-const loginSendBtn = document.getElementById("login-send-btn");
-const otpSection = document.getElementById("otp-section");
 const loginMessage = document.getElementById("login-message");
-const loginCodeInput = document.getElementById("login-code");
-const verifyCodeBtn = document.getElementById("verify-code-btn");
 const userNameDisplay = document.getElementById("user-name-display");
 const welcomeName = document.getElementById("welcome-name");
 const footerCredit = document.getElementById("footer-credit");
@@ -325,6 +508,7 @@ async function loadExternalSongs() {
               artist: song.artist || "Unknown Artist",
               url: song.url,
               cover: song.cover || "assets/bison image.jpg",
+              cover: song.cover || "assets/default.jpg",
               duration: song.duration || "3:00",
               lyrics: song.lyrics || [
                 { time: 0, text: `♪ Synced track from album: ${album.title} ♪` },
@@ -334,6 +518,8 @@ async function loadExternalSongs() {
               ]
             };
             SONGS_DATABASE.push(existingSong);
+            // Add newly synced songs to slits (unless already played)
+            try { addSongToSlits(existingSong.id); } catch (e) { /* ignore */ }
           }
           songIds.push(existingSong.id);
         });
@@ -363,6 +549,7 @@ async function loadExternalSongs() {
 
 async function init() {
   loadLocalStorage();
+  loadSlitsFromStorage();
   loadUserState();
   await loadExternalSongs();
   setupEventListeners();
@@ -376,8 +563,164 @@ async function init() {
   renderFolders();
   renderQuickAccessGrid();
   renderSidebarFolders();
+  renderSlits();
   
   navigate("home");
+}
+
+/* ==========================================================================
+   Slits — Apple Music-style horizontal "Listen Now" tiles
+   ========================================================================== */
+
+/** Load slits state from localStorage */
+function loadSlitsFromStorage() {
+  const storedPlayedSlits = localStorage.getItem("spotify_played_slits");
+
+  if (storedPlayedSlits) {
+    try { playedSlits = JSON.parse(storedPlayedSlits); } catch (e) { playedSlits = []; }
+  } else {
+    playedSlits = [];
+  }
+
+  // Always seed slits from ALL songs in SONGS_DATABASE (freshest state)
+  slits = SONGS_DATABASE.map(s => s.id);
+  saveSlitsToStorage();
+}
+
+/** Persist slits to localStorage */
+function saveSlitsToStorage() {
+  localStorage.setItem("spotify_slits", JSON.stringify(slits));
+  localStorage.setItem("spotify_played_slits", JSON.stringify(playedSlits));
+}
+
+/** Add a song id to the slits list (used when syncing new songs) */
+function addSongToSlits(songId) {
+  if (!slits.includes(songId) && !playedSlits.includes(songId)) {
+    slits.push(songId);
+    saveSlitsToStorage();
+  }
+}
+
+/**
+ * Render Apple Music-style horizontal slit tiles.
+ * Shows up to 20 unplayed songs; active (currently playing) card gets a green glow ring.
+ */
+function renderSlits() {
+  if (!slitsContainer) return;
+  slitsContainer.innerHTML = "";
+
+  // Filter: hide played slits, limit to 20
+  const visibleIds = slits.filter(id => !playedSlits.includes(id)).slice(0, 20);
+
+  if (visibleIds.length === 0) {
+    slitsContainer.innerHTML = `
+      <div class="slits-empty">
+        <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5" fill="none" style="margin-bottom:10px;opacity:0.4;">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <p>All songs have been played. Hit <strong>Refresh</strong> to reset.</p>
+      </div>`;
+    return;
+  }
+
+  visibleIds.forEach(songId => {
+    const song = SONGS_DATABASE.find(s => s.id === songId);
+    if (!song) return;
+
+    const activeSong = activeQueue[currentQueueIndex];
+    const isActive = activeSong && activeSong.id === songId;
+
+    const card = document.createElement("div");
+    card.className = `slit-card${isActive ? " slit-playing" : ""}`;
+    card.id = `slit-card-${songId}`;
+    card.setAttribute("data-song-id", songId);
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("aria-label", `Play ${song.title} by ${song.artist}`);
+
+    card.innerHTML = `
+      <div class="slit-thumb">
+        <img src="${song.cover}" alt="${song.title}" loading="lazy"
+             onerror="this.src='assets/bison image.jpg'">
+      </div>
+      <div class="slit-text">
+        <span class="slit-title">${song.title}</span>
+        <span class="slit-artist">${song.artist}</span>
+      </div>
+      <button class="slit-play-btn" title="Play ${song.title}" tabindex="-1">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <path d="M8 5v14l11-7z"></path>
+        </svg>
+      </button>`;
+
+    // Click anywhere on card or the play button → play song
+    const playSong = (e) => {
+      e.stopPropagation();
+      // Mark as played and hide
+      if (!playedSlits.includes(songId)) {
+        playedSlits.push(songId);
+        saveSlitsToStorage();
+      }
+      // Set queue to all songs starting from this track
+      activeQueue = [...SONGS_DATABASE];
+      const idx = activeQueue.findIndex(s => s.id === songId);
+      if (idx !== -1) {
+        currentQueueIndex = idx;
+        loadTrack(songId, true); // ← pass song ID, not queue index
+      }
+      // Animate the card out before re-rendering
+      card.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+      card.style.transform = "translateY(-10px) scale(0.92)";
+      card.style.opacity = "0";
+      setTimeout(() => renderSlits(), 320);
+    };
+
+    card.addEventListener("click", playSong);
+    card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") playSong(e); });
+    card.querySelector(".slit-play-btn").addEventListener("click", playSong);
+
+    slitsContainer.appendChild(card);
+  });
+
+  // Entrance animation — stagger each card
+  const cards = slitsContainer.querySelectorAll(".slit-card");
+  cards.forEach((card, i) => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(12px)";
+    card.style.transition = "none";
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        card.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      }, i * 40);
+    });
+  });
+}
+
+/** Refresh slits — reset played list and re-render */
+function refreshSlits() {
+  playedSlits = [];
+  // Re-seed from full song database
+  slits = SONGS_DATABASE.slice(0, Math.min(20, SONGS_DATABASE.length)).map(s => s.id);
+  saveSlitsToStorage();
+  renderSlits();
+}
+
+/** Update the green glow ring on whichever slit card is currently playing */
+function updateSlitPlayingState() {
+  const activeSong = activeQueue[currentQueueIndex];
+  const allSlitCards = document.querySelectorAll(".slit-card");
+  allSlitCards.forEach(card => {
+    const cardSongId = parseInt(card.getAttribute("data-song-id"), 10);
+    if (activeSong && cardSongId === activeSong.id) {
+      card.classList.add("slit-playing");
+    } else {
+      card.classList.remove("slit-playing");
+    }
+  });
 }
 
 function loadLocalStorage() {
@@ -403,8 +746,34 @@ function loadLocalStorage() {
         cover: "assets/Jana-Nayagan.jpg",
         songIds: [6, 7, 8]
       });
-      localStorage.setItem("spotify_folders", JSON.stringify(folders));
     }
+    const karupuFolder = folders.find(f => f.id === "folder_karupu_hits");
+    if (!karupuFolder) {
+      folders.push({
+        id: "folder_karupu_hits",
+        title: "Karupu Hits",
+        desc: "A curated collection of six Karupu tracks with a shared cover image.",
+        cover: "assets/photo 1.jpg",
+        songIds: [9, 10, 11, 12, 13, 14]
+      });
+    } else if (!Array.isArray(karupuFolder.songIds) || karupuFolder.songIds.length === 0) {
+      karupuFolder.songIds = [9, 10, 11, 12, 13, 14];
+    }
+
+    const gethuFolder = folders.find(f => f.id === "folder_gethu_vibes");
+    if (!gethuFolder) {
+      folders.push({
+        id: "folder_gethu_vibes",
+        title: "Gethu Vibes",
+        desc: "Custom collection containing your requested Gethu Vibes tracks.",
+        cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+        songIds: [15, 16, 17, 18, 19, 20, 21]
+      });
+    } else if (!Array.isArray(gethuFolder.songIds) || gethuFolder.songIds.length === 0) {
+      gethuFolder.songIds = [15, 16, 17, 18, 19, 20, 21];
+    }
+
+    localStorage.setItem("spotify_folders", JSON.stringify(folders));
   } else {
     // Default pre-loaded folder holding all the 6 songs
     folders = [
@@ -428,6 +797,20 @@ function loadLocalStorage() {
         desc: "Custom synced playlist featuring new hits with high-fidelity streaming.",
         cover: "assets/Jana-Nayagan.jpg",
         songIds: [6, 7, 8]
+      },
+      {
+        id: "folder_karupu_hits",
+        title: "Karupu Hits",
+        desc: "A curated collection of six Karupu tracks with a shared cover image.",
+        cover: "assets/photo 1.jpg",
+        songIds: [9, 10, 11, 12, 13, 14]
+      },
+      {
+        id: "folder_gethu_vibes",
+        title: "Gethu Vibes",
+        desc: "Custom collection containing your requested Gethu Vibes tracks.",
+        cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
+        songIds: [15, 16, 17, 18, 19, 20, 21]
       }
     ];
     localStorage.setItem("spotify_folders", JSON.stringify(folders));
@@ -447,41 +830,17 @@ function saveUserState() {
 }
 
 function loadUserState() {
-  // Check URL parameters for WhatsApp verification redirect link
-  const urlParams = new URLSearchParams(window.location.search);
-  const isVerifiedParam = urlParams.get("verified");
-  const nameParam = urlParams.get("name");
-  const phoneParam = urlParams.get("phone");
-
-  if (isVerifiedParam === "true" && nameParam && phoneParam) {
-    currentUser = {
-      name: nameParam,
-      phone: phoneParam,
-      verified: true
-    };
-    saveUserState();
-    
-    // Clean up URL query parameters so they don't stay in the address bar
-    const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-    window.history.replaceState({}, document.title, cleanUrl);
-    
-    // Show verified message
-    if (loginMessage) {
-      loginMessage.textContent = "Verified successfully — welcome to Spotify Lite!";
-    }
-  } else {
-    const storedUser = localStorage.getItem("spotify_lite_user");
-    if (storedUser) {
-      try {
-        currentUser = JSON.parse(storedUser);
-      } catch (error) {
-        currentUser = { name: "Guest", phone: "", verified: false };
-      }
+  const storedUser = localStorage.getItem("spotify_lite_user");
+  if (storedUser) {
+    try {
+      currentUser = JSON.parse(storedUser);
+    } catch (error) {
+      currentUser = { name: "Guest", verified: false };
     }
   }
   
   if (!currentUser || typeof currentUser !== "object") {
-    currentUser = { name: "Guest", phone: "", verified: false };
+    currentUser = { name: "Guest", verified: false };
   }
   
   updateUserUI();
@@ -512,109 +871,65 @@ function updateUserUI() {
   if (userNameDisplay) userNameDisplay.textContent = name;
   if (welcomeName) welcomeName.textContent = name;
   if (footerCredit) footerCredit.textContent = `© 2026 Spotify Lite. Crafted for ${name}.`;
-  if (currentUser.verified && currentUser.phone) {
-    loginPhoneInput.value = currentUser.phone;
-  }
 }
 
 function logoutUser() {
-  currentUser = { name: "Guest", phone: "", verified: false };
+  currentUser = { name: "Guest", verified: false };
   saveUserState();
   updateUserUI();
   loginNameInput.value = "";
-  loginPhoneInput.value = "";
-  loginCodeInput.value = "";
-  otpSection.style.display = "none";
-  loginMessage.textContent = "You have been logged out. Please sign in again to continue.";
+  loginMessage.textContent = "You have been logged out. Please enter your name to login.";
   showLoginOverlay();
 }
 
 function getInitials(name) {
-  if (!name) return "GL";
-  const parts = name.trim().split(/\s+/).filter(Boolean);
-  if (parts.length === 0) return "GL";
-  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
-  return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
+  if (!name) return "S";
+  const trimmed = name.trim();
+  if (trimmed.length === 0) return "S";
+  return trimmed.charAt(0).toUpperCase();
 }
 
-function normalizePhoneNumber(value) {
-  if (!value) return "";
-  return value.replace(/[^0-9]/g, "");
-}
-
-function generateVerificationCode() {
-  return String(Math.floor(1000 + Math.random() * 9000));
-}
-
-function sendWhatsAppVerification() {
+function performLogin() {
   const name = loginNameInput.value.trim();
-  const phone = normalizePhoneNumber(loginPhoneInput.value);
-
   if (!name) {
     loginMessage.textContent = "Please enter your name.";
     return;
   }
-  if (!phone || phone.length < 8) {
-    loginMessage.textContent = "Please enter a valid phone number with country code.";
-    return;
-  }
-
   currentUser.name = name;
-  currentUser.phone = phone;
-  currentUser.verified = false;
+  currentUser.verified = true;
   saveUserState();
   updateUserUI();
-
-  pendingVerificationCode = generateVerificationCode();
-  
-  // Construct the verification redirect link
-  const verificationUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?verified=true&name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}`;
-  
-  loginMessage.textContent = `Verification link with code ${pendingVerificationCode} is ready. Click below to simulate or send.`;
-  
-  // Update the simulation anchor href
-  const simLink = document.getElementById("whatsapp-sim-link");
-  if (simLink) {
-    simLink.href = verificationUrl;
-  }
-  
-  otpSection.style.display = "grid";
-
-  const messageText = `Verify your Spotify Lite login by clicking this link: ${verificationUrl} (Code: ${pendingVerificationCode})`;
-  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(messageText)}`;
-  window.open(whatsappUrl, "_blank");
-}
-
-function verifyLoginCode() {
-  const enteredCode = loginCodeInput.value.trim();
-  if (!enteredCode) {
-    loginMessage.textContent = "Enter the verification code from WhatsApp.";
-    return;
-  }
-  if (enteredCode === pendingVerificationCode) {
-    currentUser.verified = true;
-    saveUserState();
-    updateUserUI();
-    hideLoginOverlay();
-    loginMessage.textContent = "Verified successfully — welcome to Spotify Lite!";
-    loginCodeInput.value = "";
-  } else {
-    loginMessage.textContent = "The code did not match. Please try again.";
-  }
+  hideLoginOverlay();
 }
 
 /* ==========================================================================
    View Routing & History Navigation
    ========================================================================== */
 function navigate(viewName, folderId = null) {
+  // Reset scroll container scroll position
+  if (scrollContainer) {
+    scrollContainer.scrollTop = 0;
+  }
+
+  // Manage scrollability for folder/liked views
+  if (scrollContainer) {
+    scrollContainer.style.overflowY = "auto";
+  }
+
   // Hide all main containers
   homeView.style.display = "none";
   libraryView.style.display = "none";
   songTableContainer.style.display = "none";
   heroBanner.style.display = "none";
   
-  const mcpSection = document.getElementById("mcp-search-section");
-  if (mcpSection) mcpSection.style.display = "none";
+  // Hide breadcrumb by default
+  const breadcrumb = document.getElementById("folder-breadcrumb");
+  if (breadcrumb) breadcrumb.style.display = "none";
+  // Toggle dedicated search page input visibility
+  const searchInputContainer = document.getElementById("search-view-input-container");
+  if (searchInputContainer) {
+    searchInputContainer.style.display = (viewName === "search") ? "block" : "none";
+  }
   
   currentView = viewName;
   activeFolderId = folderId;
@@ -624,6 +939,11 @@ function navigate(viewName, folderId = null) {
   navSearchLink.classList.remove("active");
   navLibrary.classList.remove("active");
   btnLikedSongs.classList.remove("active");
+
+  // Deactivate all mobile bottom nav items
+  if (mobileNavHome) mobileNavHome.classList.remove("active");
+  if (mobileNavSearch) mobileNavSearch.classList.remove("active");
+  if (mobileNavLibrary) mobileNavLibrary.classList.remove("active");
   
   // Highlight sidebar folder item if needed
   const activeFolders = document.querySelectorAll(".sidebar-playlist-item");
@@ -631,28 +951,33 @@ function navigate(viewName, folderId = null) {
 
   if (viewName === "home") {
     navHome.classList.add("active");
+    if (mobileNavHome) mobileNavHome.classList.add("active");
     homeView.style.display = "block";
     searchInput.value = "";
     clearSearchBtn.style.display = "none";
   } 
   else if (viewName === "library") {
     navLibrary.classList.add("active");
+    if (mobileNavLibrary) mobileNavLibrary.classList.add("active");
     libraryView.style.display = "block";
     renderFolders();
   } 
   else if (viewName === "search") {
     navSearchLink.classList.add("active");
+    if (mobileNavSearch) mobileNavSearch.classList.add("active");
     songTableContainer.style.display = "block";
     // Search results render into song-table-section
     performSearch(searchInput.value.trim());
   } 
   else if (viewName === "liked-detail") {
     btnLikedSongs.classList.add("active");
+    if (mobileNavLibrary) mobileNavLibrary.classList.add("active");
     setupLikedSongsHeroBanner();
     songTableContainer.style.display = "block";
     renderSongTable(likedSongs.map(id => SONGS_DATABASE.find(s => s.id === id)), "Liked Songs");
   } 
   else if (viewName === "folder-detail" && folderId) {
+    if (mobileNavLibrary) mobileNavLibrary.classList.add("active");
     const folder = folders.find(f => f.id === folderId);
     if (folder) {
       // Highlight sidebar shortcut
@@ -683,8 +1008,8 @@ function navigate(viewName, folderId = null) {
 }
 
 function updateHistoryButtonsUI() {
-  headerBackBtn.disabled = historyIndex === 0;
-  headerForwardBtn.disabled = historyIndex === viewHistory.length - 1;
+  if (headerBackBtn) headerBackBtn.disabled = historyIndex === 0;
+  if (headerForwardBtn) headerForwardBtn.disabled = historyIndex === viewHistory.length - 1;
 }
 
 function goBack() {
@@ -753,6 +1078,13 @@ function renderFolders() {
   foldersGridHome.innerHTML = "";
   foldersGridLibrary.innerHTML = "";
   
+  const folderCount = folders.length;
+  const trackCount = folders.reduce((total, folder) => total + (Array.isArray(folder.songIds) ? folder.songIds.length : 0), 0);
+  const folderCountEl = document.getElementById("library-folder-count");
+  const trackCountEl = document.getElementById("library-track-count");
+  if (folderCountEl) folderCountEl.textContent = folderCount;
+  if (trackCountEl) trackCountEl.textContent = trackCount;
+  
   if (folders.length === 0) {
     const emptyMsg = `<p style="color:var(--text-muted); grid-column:1/-1;">No library folders found. Create one to arrange your songs!</p>`;
     foldersGridHome.innerHTML = emptyMsg;
@@ -784,6 +1116,9 @@ function createFolderCardElement(folder) {
     </div>
     <h3>${folder.title}</h3>
     <p>${folder.desc}</p>
+    <div class="folder-meta-row">
+      <span>${folder.songIds.length} track${folder.songIds.length === 1 ? '' : 's'}</span>
+    </div>
     <div class="card-actions">
       ${folder.id !== "folder_bison_folk" ? `
         <button class="card-delete-btn" title="Delete Folder">Delete</button>
@@ -866,7 +1201,9 @@ function renderQuickAccessGrid() {
   });
 }
 
-function createNewFolder(title, desc) {
+
+
+function createNewFolder(title, desc, cover) {
   if (!title) return;
   
   const id = "folder_" + Date.now();
@@ -874,7 +1211,7 @@ function createNewFolder(title, desc) {
     id,
     title,
     desc: desc || "Custom user library compartment.",
-    cover: "assets/bison image.jpg",
+    cover: cover || "assets/bison image.jpg",
     songIds: []
   };
   
@@ -902,7 +1239,7 @@ function playFolderSongs(folderId) {
   if (folder && folder.songIds.length > 0) {
     activeQueue = folder.songIds.map(id => SONGS_DATABASE.find(s => s.id === id)).filter(Boolean);
     currentQueueIndex = 0;
-    loadTrack(0);
+    loadTrack(activeQueue[0].id);
     playTrack();
   } else {
     alert("This folder is empty. Click the '+' on songs in Home or Search to add files here!");
@@ -1179,6 +1516,24 @@ function loadTrack(songId, triggerPlay = true) {
   sidebarArtImg.src = song.cover;
   visualizerTrackName.textContent = song.title;
   
+  // Update full screen player elements
+  const fsCover = document.getElementById("fs-player-track-cover");
+  const fsTitle = document.getElementById("fs-player-track-title");
+  const fsArtist = document.getElementById("fs-player-track-artist");
+  const fsFavBtn = document.getElementById("fs-player-fav-btn");
+  const fsTotalDuration = document.getElementById("fs-total-duration");
+  const fsSeekBar = document.getElementById("fs-seek-bar");
+  const fsProgressFill = document.getElementById("fs-progress-track-fill");
+  const fsCurrentTime = document.getElementById("fs-current-time");
+
+  if (fsCover) fsCover.src = song.cover;
+  if (fsTitle) fsTitle.textContent = song.title;
+  if (fsArtist) fsArtist.textContent = song.artist;
+  if (fsTotalDuration) fsTotalDuration.textContent = song.duration;
+  if (fsSeekBar) fsSeekBar.value = 0;
+  if (fsProgressFill) fsProgressFill.style.width = "0%";
+  if (fsCurrentTime) fsCurrentTime.textContent = "0:00";
+  
   // Handle text scrolling marquee
   const titleWrapper = document.querySelector(".track-title-wrapper");
   if (song.title.length > 20) {
@@ -1192,9 +1547,17 @@ function loadTrack(songId, triggerPlay = true) {
   if (isLiked) {
     playerFavBtn.classList.add("active-fav");
     playerFavBtn.querySelector("svg").setAttribute("fill", "currentColor");
+    if (fsFavBtn) {
+      fsFavBtn.classList.add("active-fav");
+      fsFavBtn.querySelector("svg").setAttribute("fill", "currentColor");
+    }
   } else {
     playerFavBtn.classList.remove("active-fav");
     playerFavBtn.querySelector("svg").setAttribute("fill", "none");
+    if (fsFavBtn) {
+      fsFavBtn.classList.remove("active-fav");
+      fsFavBtn.querySelector("svg").setAttribute("fill", "none");
+    }
   }
   
   // Reset seek sliders
@@ -1289,23 +1652,39 @@ function prevTrack() {
 function toggleShuffle() {
   isShuffle = !isShuffle;
   shuffleBtn.classList.toggle("active", isShuffle);
+  const fsShuffleBtn = document.getElementById("fs-shuffle-btn");
+  if (fsShuffleBtn) fsShuffleBtn.classList.toggle("active", isShuffle);
 }
 
 function toggleRepeat() {
   isRepeat = (isRepeat + 1) % 3;
   const badge = document.getElementById("repeat-badge");
+  const fsRepeatBtn = document.getElementById("fs-repeat-btn");
+  const fsBadge = document.getElementById("fs-repeat-badge");
   
   if (isRepeat === 0) {
     repeatBtn.classList.remove("active");
     badge.style.display = "none";
+    if (fsRepeatBtn) fsRepeatBtn.classList.remove("active");
+    if (fsBadge) fsBadge.style.display = "none";
   } else if (isRepeat === 1) {
     repeatBtn.classList.add("active");
     badge.style.display = "flex";
     badge.textContent = "All";
+    if (fsRepeatBtn) fsRepeatBtn.classList.add("active");
+    if (fsBadge) {
+      fsBadge.style.display = "flex";
+      fsBadge.textContent = "All";
+    }
   } else {
     repeatBtn.classList.add("active");
     badge.style.display = "flex";
     badge.textContent = "1";
+    if (fsRepeatBtn) fsRepeatBtn.classList.add("active");
+    if (fsBadge) {
+      fsBadge.style.display = "flex";
+      fsBadge.textContent = "1";
+    }
   }
 }
 
@@ -1482,10 +1861,21 @@ function setupEventListeners() {
   document.getElementById("view-all-library-link").addEventListener("click", () => {
     navigate("library");
   });
+
+  // Play all liked songs button
+  const quickAccessPlayAllBtn = document.getElementById("quick-access-play-all");
+  if (quickAccessPlayAllBtn) {
+    quickAccessPlayAllBtn.addEventListener("click", () => {
+      activeQueue = [...SONGS_DATABASE.slice(0, 6)];
+      currentQueueIndex = 0;
+      loadTrack(activeQueue[0].id);
+      playTrack();
+    });
+  }
   
   // Header Navigation Arrows
-  headerBackBtn.addEventListener("click", goBack);
-  headerForwardBtn.addEventListener("click", goForward);
+  if (headerBackBtn) headerBackBtn.addEventListener("click", goBack);
+  if (headerForwardBtn) headerForwardBtn.addEventListener("click", goForward);
 
   // Bottom Media Controllers
   playPauseBtn.addEventListener("click", togglePlayPause);
@@ -1503,24 +1893,86 @@ function setupEventListeners() {
   });
 
   // Login actions
-  if (loginSendBtn) {
-    loginSendBtn.addEventListener("click", (e) => {
+  const loginBtn = document.getElementById("login-btn");
+  if (loginBtn) {
+    loginBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      sendWhatsAppVerification();
+      performLogin();
     });
   }
 
-  if (verifyCodeBtn) {
-    verifyCodeBtn.addEventListener("click", (e) => {
+  if (userAvatar) {
+    userAvatar.addEventListener("click", (e) => {
       e.preventDefault();
-      verifyLoginCode();
-    });
-  }
+      // Show custom styled confirm modal
+      const existing = document.getElementById("custom-confirm-modal");
+      if (existing) existing.remove();
 
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      logoutUser();
+      const modal = document.createElement("div");
+      modal.id = "custom-confirm-modal";
+      modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.75);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        backdrop-filter: blur(5px);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      `;
+      modal.innerHTML = `
+        <div style="
+          background: #181818;
+          color: white;
+          padding: 24px;
+          border-radius: 12px;
+          width: 300px;
+          text-align: center;
+          border: 1px solid rgba(255,255,255,0.06);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        ">
+          <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700;">Log out</h3>
+          <p style="margin: 0 0 24px 0; font-size: 14px; color: #b3b3b3; line-height: 1.4;">Are you sure you want to log out of Spotify Lite?</p>
+          <div style="display: flex; justify-content: flex-end; gap: 12px;">
+            <button id="confirm-cancel" style="
+              background: transparent;
+              border: 1px solid #727272;
+              color: white;
+              font-size: 13px;
+              font-weight: 700;
+              padding: 8px 16px;
+              border-radius: 500px;
+              cursor: pointer;
+              outline: none;
+            ">Cancel</button>
+            <button id="confirm-ok" style="
+              background: #ffffff;
+              border: none;
+              color: black;
+              font-size: 13px;
+              font-weight: 700;
+              padding: 8px 16px;
+              border-radius: 500px;
+              cursor: pointer;
+              outline: none;
+            ">Log out</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      document.getElementById("confirm-cancel").onclick = () => {
+        modal.remove();
+      };
+
+      document.getElementById("confirm-ok").onclick = () => {
+        modal.remove();
+        logoutUser();
+      };
     });
   }
 
@@ -1563,12 +2015,27 @@ function setupEventListeners() {
     seekBar.parentElement.style.setProperty("--thumb-offset", `${pct}%`);
     
     currentTimeLabel.textContent = formatTime(audio.currentTime);
+    
+    // Sync full screen player seek bar
+    const fsSeekBar = document.getElementById("fs-seek-bar");
+    const fsProgressFill = document.getElementById("fs-progress-track-fill");
+    const fsCurrentTime = document.getElementById("fs-current-time");
+    
+    if (fsSeekBar) {
+      fsSeekBar.value = pct;
+      fsSeekBar.parentElement.style.setProperty("--thumb-offset", `${pct}%`);
+    }
+    if (fsProgressFill) fsProgressFill.style.width = `${pct}%`;
+    if (fsCurrentTime) fsCurrentTime.textContent = formatTime(audio.currentTime);
+    
     updateLyricsDisplay(audio.currentTime);
     modulateVisualizerBars();
   });
   
   audio.addEventListener("loadedmetadata", () => {
     totalDurationLabel.textContent = formatTime(audio.duration);
+    const fsTotalDuration = document.getElementById("fs-total-duration");
+    if (fsTotalDuration) fsTotalDuration.textContent = formatTime(audio.duration);
   });
 
   // Slider controls seeking
@@ -1579,6 +2046,17 @@ function setupEventListeners() {
     progressTrackFill.style.width = `${e.target.value}%`;
     seekBar.parentElement.style.setProperty("--thumb-offset", `${e.target.value}%`);
     currentTimeLabel.textContent = formatTime(seekTo);
+    
+    // Sync full screen seek bar too
+    const fsSeekBar = document.getElementById("fs-seek-bar");
+    const fsProgressFill = document.getElementById("fs-progress-track-fill");
+    const fsCurrentTime = document.getElementById("fs-current-time");
+    if (fsSeekBar) {
+      fsSeekBar.value = e.target.value;
+      fsSeekBar.parentElement.style.setProperty("--thumb-offset", `${e.target.value}%`);
+    }
+    if (fsProgressFill) fsProgressFill.style.width = `${e.target.value}%`;
+    if (fsCurrentTime) fsCurrentTime.textContent = formatTime(seekTo);
   });
 
   // Volume slider
@@ -1660,16 +2138,40 @@ function setupEventListeners() {
     }
   });
 
-  // Create Library Folder Actions
-  const handleCreateFolder = () => {
-    const title = prompt("Enter library folder name:");
-    if (!title) return;
-    const desc = prompt("Enter folder description:");
-    createNewFolder(title.trim(), desc ? desc.trim() : "");
+  // Create Library Folder Actions (modal)
+  const openCreateFolderModal = () => {
+    const modal = document.getElementById("create-folder-modal");
+    if (!modal) return;
+    modal.style.display = "flex";
+    const titleIn = document.getElementById("new-folder-title");
+    const descIn = document.getElementById("new-folder-desc");
+    if (titleIn) titleIn.value = "";
+    if (descIn) descIn.value = "";
+    if (titleIn) titleIn.focus();
   };
 
-  createFolderBtnSidebar.addEventListener("click", handleCreateFolder);
-  createFolderBtnMain.addEventListener("click", handleCreateFolder);
+  const closeCreateFolderModal = () => {
+    const modal = document.getElementById("create-folder-modal");
+    if (!modal) return;
+    modal.style.display = "none";
+  };
+
+  // hookups for modal controls
+  const modalCloseBtn = document.getElementById("modal-close-btn");
+  const modalCancelBtn = document.getElementById("modal-cancel-btn");
+  const modalCreateBtn = document.getElementById("modal-create-btn");
+  if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeCreateFolderModal);
+  if (modalCancelBtn) modalCancelBtn.addEventListener("click", closeCreateFolderModal);
+  if (modalCreateBtn) modalCreateBtn.addEventListener("click", () => {
+    const title = document.getElementById("new-folder-title").value.trim();
+    if (!title) { alert("Please enter a folder name."); return; }
+    const desc = document.getElementById("new-folder-desc").value.trim();
+    createNewFolder(title, desc);
+    closeCreateFolderModal();
+  });
+
+  createFolderBtnSidebar.addEventListener("click", openCreateFolderModal);
+  createFolderBtnMain.addEventListener("click", openCreateFolderModal);
 
 
 
@@ -1681,6 +2183,169 @@ function setupEventListeners() {
       mainHeader.classList.remove("scrolled");
     }
   });
+
+  // ---- Slits scroll nav buttons ----
+  const slitsPrevBtn = document.getElementById("slits-prev-btn");
+  const slitsNextBtn = document.getElementById("slits-next-btn");
+  const slitsRefreshBtn = document.getElementById("slits-refresh-btn");
+
+  if (slitsPrevBtn && slitsContainer) {
+    slitsPrevBtn.addEventListener("click", () => {
+      slitsContainer.scrollBy({ left: -440, behavior: "smooth" });
+    });
+  }
+
+  if (slitsNextBtn && slitsContainer) {
+    slitsNextBtn.addEventListener("click", () => {
+      slitsContainer.scrollBy({ left: 440, behavior: "smooth" });
+    });
+  }
+
+  if (slitsRefreshBtn) {
+    slitsRefreshBtn.addEventListener("click", refreshSlits);
+  }
+
+  // Update slit playing highlight whenever a new track loads
+  // (piggyback on audio events already handled elsewhere)
+  audio.addEventListener("play", updateSlitPlayingState);
+  audio.addEventListener("pause", updateSlitPlayingState);
+
+  // Mobile Bottom Navigation Click Listeners
+  if (mobileNavHome) {
+    mobileNavHome.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate("home");
+    });
+  }
+
+  if (mobileNavSearch) {
+    mobileNavSearch.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate("search");
+      setTimeout(() => {
+        if (searchInput) searchInput.focus();
+      }, 50);
+    });
+  }
+
+  if (mobileNavLibrary) {
+    mobileNavLibrary.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate("library");
+    });
+  }
+
+  // Mobile Full Screen Player Controls
+  const fsPlayer = document.getElementById("mobile-fullscreen-player");
+  const fsCloseBtn = document.getElementById("fs-close-btn");
+  const miniPlayerTrackInfo = document.querySelector(".player-track-info");
+
+  const openFullscreenPlayer = () => {
+    if (fsPlayer) {
+      fsPlayer.style.display = "flex";
+      // Force offsetWidth to trigger reflow before adding active class for animation
+      void fsPlayer.offsetWidth;
+      fsPlayer.classList.add("active");
+    }
+  };
+
+  const closeFullscreenPlayer = () => {
+    if (fsPlayer) {
+      fsPlayer.classList.remove("active");
+      // Wait for slide-down animation to complete before display: none
+      setTimeout(() => {
+        if (!fsPlayer.classList.contains("active")) {
+          fsPlayer.style.display = "none";
+        }
+      }, 400);
+    }
+  };
+
+  // Open on clicking mini player info (only if viewport <= 768)
+  if (miniPlayerTrackInfo) {
+    miniPlayerTrackInfo.addEventListener("click", (e) => {
+      // Don't trigger full-screen if clicking the favorite or device buttons
+      if (e.target.closest("#player-fav-btn") || e.target.closest("#player-device-btn")) return;
+      if (window.innerWidth <= 768) {
+        openFullscreenPlayer();
+      }
+    });
+  }
+
+  if (fsCloseBtn) {
+    fsCloseBtn.addEventListener("click", closeFullscreenPlayer);
+  }
+
+  // Bind full-screen buttons to main player core functions
+  const fsPlayPauseBtn = document.getElementById("fs-play-pause-btn");
+  const fsPrevBtn = document.getElementById("fs-prev-btn");
+  const fsNextBtn = document.getElementById("fs-next-btn");
+  const fsShuffleBtn = document.getElementById("fs-shuffle-btn");
+  const fsRepeatBtn = document.getElementById("fs-repeat-btn");
+  const fsFavBtn = document.getElementById("fs-player-fav-btn");
+
+  if (fsPlayPauseBtn) {
+    fsPlayPauseBtn.addEventListener("click", togglePlayPause);
+  }
+  if (fsPrevBtn) {
+    fsPrevBtn.addEventListener("click", prevTrack);
+  }
+  if (fsNextBtn) {
+    fsNextBtn.addEventListener("click", nextTrack);
+  }
+  if (fsShuffleBtn) {
+    fsShuffleBtn.addEventListener("click", toggleShuffle);
+  }
+  if (fsRepeatBtn) {
+    fsRepeatBtn.addEventListener("click", toggleRepeat);
+  }
+  if (fsFavBtn) {
+    fsFavBtn.addEventListener("click", () => {
+      // Toggle favorite on the current song
+      const currentSong = SONGS_DATABASE.find(s => s.url === audio.src || audio.src.endsWith(s.url));
+      if (currentSong) {
+        const index = likedSongs.indexOf(currentSong.id);
+        if (index > -1) {
+          likedSongs.splice(index, 1);
+        } else {
+          likedSongs.push(currentSong.id);
+        }
+        saveUserState();
+        
+        // Sync favorite UI on both buttons
+        const isLiked = likedSongs.includes(currentSong.id);
+        playerFavBtn.classList.toggle("active-fav", isLiked);
+        playerFavBtn.querySelector("svg").setAttribute("fill", isLiked ? "currentColor" : "none");
+        
+        fsFavBtn.classList.toggle("active-fav", isLiked);
+        fsFavBtn.querySelector("svg").setAttribute("fill", isLiked ? "currentColor" : "none");
+        
+        renderFolders();
+      }
+    });
+  }
+
+  // Seek bar seek functionality for full screen player
+  const fsSeekBar = document.getElementById("fs-seek-bar");
+  const fsProgressFill = document.getElementById("fs-progress-track-fill");
+  const fsCurrentTime = document.getElementById("fs-current-time");
+
+  if (fsSeekBar) {
+    fsSeekBar.addEventListener("input", (e) => {
+      if (!audio.duration) return;
+      const seekTo = (parseFloat(e.target.value) / 100) * audio.duration;
+      audio.currentTime = seekTo;
+      if (fsProgressFill) fsProgressFill.style.width = `${e.target.value}%`;
+      fsSeekBar.parentElement.style.setProperty("--thumb-offset", `${e.target.value}%`);
+      if (fsCurrentTime) fsCurrentTime.textContent = formatTime(seekTo);
+      
+      // sync main seek bar
+      seekBar.value = e.target.value;
+      progressTrackFill.style.width = `${e.target.value}%`;
+      seekBar.parentElement.style.setProperty("--thumb-offset", `${e.target.value}%`);
+      currentTimeLabel.textContent = formatTime(seekTo);
+    });
+  }
 }
 
 /* ==========================================================================
@@ -1719,14 +2384,20 @@ function togglePlayBtnUI(playing) {
   const playIcon = document.getElementById("play-icon");
   const pauseIcon = document.getElementById("pause-icon");
   const heroPlayIcon = document.getElementById("hero-play-btn").querySelector("svg path");
+  const fsPlayIcon = document.getElementById("fs-play-icon");
+  const fsPauseIcon = document.getElementById("fs-pause-icon");
   
   if (playing) {
     playIcon.style.display = "none";
     pauseIcon.style.display = "block";
+    if (fsPlayIcon) fsPlayIcon.style.display = "none";
+    if (fsPauseIcon) fsPauseIcon.style.display = "block";
     if (heroPlayIcon) heroPlayIcon.setAttribute("d", "M6 19h4V5H6v14zm8-14v14h4V5h-4z"); // pause icon
   } else {
     playIcon.style.display = "block";
     pauseIcon.style.display = "none";
+    if (fsPlayIcon) fsPlayIcon.style.display = "block";
+    if (fsPauseIcon) fsPauseIcon.style.display = "none";
     if (heroPlayIcon) heroPlayIcon.setAttribute("d", "M8 5v14l11-7z"); // play icon
   }
 }
