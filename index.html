@@ -33,11 +33,15 @@
         <input id="login-phone" type="tel" placeholder="Country code + number" autocomplete="tel">
         <button id="login-send-btn" class="login-button">Send WhatsApp Verify Message</button>
       </div>
+      <p id="login-message" class="login-message" style="margin: 10px 0; font-size: 13px; text-align: center; min-height: 18px; color: #ff5555;"></p>
       <div id="otp-section" class="otp-section" style="display:none;">
-        <p id="login-message" class="login-message"></p>
         <label for="login-code">Enter verification code</label>
         <input id="login-code" type="text" placeholder="1234" maxlength="6" autocomplete="one-time-code">
         <button id="verify-code-btn" class="login-button">Verify Code</button>
+        <div style="margin-top: 12px; text-align: center; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 6px;">
+          <span style="color: #b3b3b3; font-size: 12px; display: block; margin-bottom: 6px;">Or click the simulated link below:</span>
+          <a id="whatsapp-sim-link" href="#" style="color: #1db954; font-weight: 600; text-decoration: underline; font-size: 13px;">Simulate WhatsApp Verification Link</a>
+        </div>
       </div>
       <p class="login-footnote">Open WhatsApp and paste the code if the app does not launch automatically.</p>
     </div>
