@@ -19,7 +19,7 @@ except AttributeError:
 sys.path.append("D:/masstamilan-mcp")
 
 try:
-    import scraper
+    import scraper  # type: ignore
 except ImportError:
     print("Error: Could not import scraper from D:/masstamilan-mcp. Make sure D:/masstamilan-mcp/scraper.py exists.")
     sys.exit(1)
