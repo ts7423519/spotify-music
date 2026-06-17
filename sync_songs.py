@@ -6,6 +6,14 @@ import uuid
 import time
 import urllib.request
 import urllib.parse
+import urllib.error
+import ssl
+
+# Disable SSL verification globally to prevent certificate errors on Windows
+try:
+    ssl._create_default_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
 
 # Append masstamilan-mcp directory to system path to reuse scraper modules
 sys.path.append("D:/masstamilan-mcp")
@@ -62,6 +70,15 @@ def upload_file_to_cloudinary(file_data, file_name, cloud_name, upload_preset, r
         with urllib.request.urlopen(req) as res:
             response_json = json.loads(res.read().decode("utf-8"))
             return response_json.get("secure_url")
+    except urllib.error.HTTPError as e:
+        error_msg = e.read().decode("utf-8")
+        try:
+            error_json = json.loads(error_msg)
+            cloudinary_error = error_json.get("error", {}).get("message", error_msg)
+            print(f"  Cloudinary Upload Failed for {file_name}: {cloudinary_error}")
+        except:
+            print(f"  Cloudinary Upload Failed for {file_name}: {error_msg}")
+        return None
     except Exception as e:
         print(f"  Cloudinary Upload Failed for {file_name}: {str(e)}")
         return None
@@ -86,6 +103,15 @@ def upload_url_to_cloudinary(source_url, cloud_name, upload_preset, resource_typ
         with urllib.request.urlopen(req) as res:
             response_json = json.loads(res.read().decode("utf-8"))
             return response_json.get("secure_url")
+    except urllib.error.HTTPError as e:
+        error_msg = e.read().decode("utf-8")
+        try:
+            error_json = json.loads(error_msg)
+            cloudinary_error = error_json.get("error", {}).get("message", error_msg)
+            print(f"  Cloudinary URL Upload Failed for poster: {cloudinary_error}")
+        except:
+            print(f"  Cloudinary URL Upload Failed for poster: {error_msg}")
+        return source_url
     except Exception as e:
         print(f"  Cloudinary URL Upload Failed for poster: {str(e)}")
         return source_url # fallback to original URL
