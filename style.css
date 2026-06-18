@@ -742,7 +742,7 @@ body {
   height: 160px;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(29, 185, 84, 0.2) 0%, rgba(18, 18, 18, 0.8) 100%), url('assets/bison image.jpg');
+  background: linear-gradient(135deg, rgba(29, 185, 84, 0.2) 0%, rgba(18, 18, 18, 0.8) 100%), url('assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -2562,26 +2562,115 @@ body {
   }
 }
 
-/* Song Card Specific Styling */
-.song-card-item {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+/* Best New Songs Carousel */
+.best-songs-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.song-card-item:hover {
-  background-color: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.16);
-  transform: translateY(-4px);
+.best-songs-carousel {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  padding: 8px 4px 16px 4px;
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
-.song-card-action-btn:hover {
-  transform: scale(1.1);
+.best-songs-carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
-.song-card-fav-btn:hover {
-  color: #ff5274 !important;
+.carousel-column {
+  flex: 0 0 min(90vw, 420px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.song-card-add-btn:hover {
-  color: #ffffff !important;
+@media (max-width: 768px) {
+  .carousel-column {
+    flex: 0 0 min(85vw, 320px);
+  }
+}
+
+.carousel-song-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, border-radius 0.2s ease;
+  border-radius: 8px;
+}
+
+.carousel-song-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
+}
+
+.carousel-song-item.song-playing {
+  background-color: rgba(29, 185, 84, 0.08);
+}
+
+.carousel-song-item:last-child {
+  border-bottom: none;
+}
+
+.carousel-song-cover {
+  width: 58px;
+  height: 58px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.carousel-song-details {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+
+.carousel-song-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carousel-song-artist {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carousel-song-options-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.carousel-song-options-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
 }

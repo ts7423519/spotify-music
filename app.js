@@ -5,7 +5,7 @@ const SONGS_DATABASE = [
     title: "Cheenikkallu Unplugged",
     artist: "Folk Unplugged Ensemble",
     url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781619453/Cheenikkallu_Unplugged_kr75g3.mp3",
-    cover: "assets/bison image.jpg",
+    cover: "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
     duration: "3:45",
     lyrics: [
       { time: 0, text: "♪ (Acoustic Guitar Intro) ♪" },
@@ -27,7 +27,7 @@ const SONGS_DATABASE = [
     title: "Theekkoluthi",
     artist: "Vijay Yesudas, Shakthisree Gopalan",
     url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781619451/Theekkoluthi_xdwgvs.mp3",
-    cover: "assets/bison image.jpg",
+    cover: "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
     duration: "4:12",
     lyrics: [
       { time: 0, text: "♪ (Drums & Bass Beat Intro) ♪" },
@@ -50,7 +50,7 @@ const SONGS_DATABASE = [
     title: "Cheenikkallu",
     artist: "Jassie Gift, Deva",
     url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781619448/Cheenikkallu_kel82b.mp3",
-    cover: "assets/bison image.jpg",
+    cover: "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
     duration: "4:01",
     lyrics: [
       { time: 0, text: "♪ (Traditional Folk Percussion Intro) ♪" },
@@ -72,7 +72,7 @@ const SONGS_DATABASE = [
     title: "Rekka Rekka",
     artist: "G.V. Prakash Kumar, Saindhavi",
     url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781619447/Rekka_Rekka_jy7k34.mp3",
-    cover: "assets/bison image.jpg",
+    cover: "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
     duration: "3:30",
     lyrics: [
       { time: 0, text: "♪ (String Orchestra & Synth Pad Intro) ♪" },
@@ -94,7 +94,7 @@ const SONGS_DATABASE = [
     title: "Thennaadu",
     artist: "Santhosh Narayanan",
     url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781619427/Thennaadu_v7jkwp.mp3",
-    cover: "assets/bison image.jpg",
+    cover: "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
     duration: "4:48",
     lyrics: [
       { time: 0, text: "♪ (Acoustic Guitar & Folk Drone Intro) ♪" },
@@ -116,7 +116,7 @@ const SONGS_DATABASE = [
     title: "Kaalamaadan Gaanam",
     artist: "Stephen Devassy, Folk Band",
     url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781619419/Kaalamaadan_Gaanam_h18gpa.mp3",
-    cover: "assets/bison image.jpg",
+    cover: "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
     duration: "3:15",
     lyrics: [
       { time: 0, text: "♪ (Epic Piano & Urumi Intro) ♪" },
@@ -656,7 +656,7 @@ async function loadExternalSongs() {
               title: song.title || "Unknown Title",
               artist: song.artist || "Unknown Artist",
               url: song.url,
-              cover: song.cover || "assets/bison image.jpg",
+              cover: song.cover || "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
               cover: song.cover || "assets/default.jpg",
               duration: song.duration || "3:00",
               lyrics: song.lyrics || [
@@ -682,7 +682,7 @@ async function loadExternalSongs() {
           id: folderId,
           title: album.title || "Synced Album",
           desc: album.desc || "Automatically synced from MassTamilan & Cloudinary.",
-          cover: album.cover || "assets/bison image.jpg",
+          cover: album.cover || "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
           songIds: songIds
         };
         folders.push(newFolder);
@@ -790,7 +790,7 @@ function renderSlits() {
     card.innerHTML = `
       <div class="slit-thumb">
         <img src="${song.cover}" alt="${song.title}" loading="lazy"
-             onerror="this.src='assets/bison image.jpg'">
+             onerror="this.src='assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg'">
       </div>
       <div class="slit-text">
         <span class="slit-title">${song.title}</span>
@@ -954,14 +954,14 @@ function loadLocalStorage() {
         id: "folder_bison_folk",
         title: "Bison Folk Hits",
         desc: "A custom folder containing all your requested folk tracks.",
-        cover: "assets/bison image.jpg",
+        cover: "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
         songIds: [0, 1, 2, 3, 4, 5]
       },
       {
         id: "folder_acoustic_vibes",
         title: "Unplugged Melodies",
         desc: "Acoustic and unplugged special folk session.",
-        cover: "assets/bison image.jpg",
+        cover: "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
         songIds: [0, 3]
       },
       {
@@ -1259,107 +1259,167 @@ function playSongDirect(songId) {
   loadTrack(songId, true);
 }
 
-function createSongCardElement(song) {
-  const card = document.createElement("div");
-  card.className = "album-card song-card-item";
-  card.setAttribute("data-song-id", song.id);
+function createCarouselSongItem(song) {
+  const item = document.createElement("div");
+  item.className = "carousel-song-item";
+  item.setAttribute("data-song-id", song.id);
 
   const isLiked = likedSongs.includes(song.id);
 
-  card.innerHTML = `
-    <div class="card-img-container">
-      <img src="${song.cover}" alt="${song.title}" loading="lazy" onerror="this.src='assets/bison image.jpg'">
-      <button class="card-play-btn" title="Play Song">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-          <path d="M8 5v14l11-7z"></path>
-        </svg>
-      </button>
+  item.innerHTML = `
+    <img class="carousel-song-cover" src="${song.cover}" alt="${song.title}" loading="lazy" onerror="this.src='assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg'">
+    <div class="carousel-song-details">
+      <span class="carousel-song-title">${song.title}</span>
+      <span class="carousel-song-artist">${song.artist}</span>
     </div>
-    <h3>${song.title}</h3>
-    <p>${song.artist}</p>
-    <div class="song-card-actions" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
-      <button class="song-card-action-btn song-card-fav-btn ${isLiked ? 'active-fav' : ''}" title="Like Song" style="background: transparent; border: none; color: ${isLiked ? '#ff3b5c' : 'var(--text-muted)'}; cursor: pointer; display: flex; align-items: center; padding: 4px; transition: color 0.2s, transform 0.2s;">
-        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.2" fill="${isLiked ? 'currentColor' : 'none'}">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-        </svg>
-      </button>
-      <button class="song-card-action-btn song-card-add-btn" title="Add to Folder" style="background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 16px; font-weight: 700; transition: color 0.2s; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
-        +
-      </button>
-    </div>
+    <button class="carousel-song-options-btn" title="Options">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+      </svg>
+    </button>
   `;
 
-  // Click on card plays the song
-  card.addEventListener("click", (e) => {
-    if (e.target.closest(".song-card-action-btn") || e.target.closest(".card-play-btn")) return;
+  // Click on row plays the song directly
+  item.addEventListener("click", (e) => {
+    if (e.target.closest(".carousel-song-options-btn")) return;
     playSongDirect(song.id);
   });
 
-  // Play button click
-  const playBtn = card.querySelector(".card-play-btn");
-  playBtn.addEventListener("click", (e) => {
+  // Options button click
+  const optBtn = item.querySelector(".carousel-song-options-btn");
+  optBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    playSongDirect(song.id);
+    showSongOptionsMenu(song.id, e);
   });
 
-  // Like button click
-  const favBtn = card.querySelector(".song-card-fav-btn");
-  favBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    toggleLike(song.id);
-  });
-
-  // Add to Folder button click
-  const addBtn = card.querySelector(".song-card-add-btn");
-  addBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    showAddToFolderModal(song.id, e);
-  });
-
-  return card;
+  return item;
 }
 
 function renderAllSongsHome() {
   if (!foldersGridHome) return;
   foldersGridHome.innerHTML = "";
-  SONGS_DATABASE.forEach(song => {
-    const card = createSongCardElement(song);
-    foldersGridHome.appendChild(card);
-  });
+
+  // Split SONGS_DATABASE into chunks of 4 songs per column
+  const chunkSize = 4;
+  for (let i = 0; i < SONGS_DATABASE.length; i += chunkSize) {
+    const chunk = SONGS_DATABASE.slice(i, i + chunkSize);
+    
+    // Create column container
+    const column = document.createElement("div");
+    column.className = "carousel-column";
+    
+    chunk.forEach(song => {
+      const songItem = createCarouselSongItem(song);
+      column.appendChild(songItem);
+    });
+    
+    foldersGridHome.appendChild(column);
+  }
   updateHomeSongsPlayingState();
 }
 
 function updateHomeSongsPlayingState() {
   const activeSong = activeQueue[currentQueueIndex];
-  const allSongCards = document.querySelectorAll(".song-card-item");
+  const allSongCards = document.querySelectorAll(".carousel-song-item");
   allSongCards.forEach(card => {
     const cardSongId = parseInt(card.getAttribute("data-song-id"), 10);
-    const titleEl = card.querySelector("h3");
-    const playIconSvg = card.querySelector(".card-play-btn svg");
+    const titleEl = card.querySelector(".carousel-song-title");
     
     if (activeSong && cardSongId === activeSong.id) {
       card.classList.add("song-playing");
-      card.style.borderColor = "var(--spotify-green)";
-      card.style.boxShadow = "0 0 15px rgba(29, 185, 84, 0.25)";
       if (titleEl) titleEl.style.color = "var(--spotify-green)";
-      
-      if (playIconSvg) {
-        if (isPlaying) {
-          playIconSvg.innerHTML = `<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>`;
-        } else {
-          playIconSvg.innerHTML = `<path d="M8 5v14l11-7z"></path>`;
-        }
-      }
     } else {
       card.classList.remove("song-playing");
-      card.style.borderColor = "rgba(255, 255, 255, 0.08)";
-      card.style.boxShadow = "0 18px 40px rgba(0, 0, 0, 0.2)";
       if (titleEl) titleEl.style.color = "var(--text-main)";
-      if (playIconSvg) {
-        playIconSvg.innerHTML = `<path d="M8 5v14l11-7z"></path>`;
-      }
     }
   });
+}
+
+function showSongOptionsMenu(songId, event) {
+  // Prevent click bubbling
+  event.stopPropagation();
+
+  // Close any existing menus
+  const existingMenu = document.getElementById("song-options-menu");
+  if (existingMenu) existingMenu.remove();
+
+  const isLiked = likedSongs.includes(songId);
+  const song = SONGS_DATABASE.find(s => s.id === songId);
+  if (!song) return;
+
+  const menu = document.createElement("div");
+  menu.id = "song-options-menu";
+  menu.style.cssText = `
+    position: fixed;
+    background: #282828;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    min-width: 160px;
+    padding: 6px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  `;
+
+  menu.innerHTML = `
+    <div class="menu-item fav-item" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; font-size: 13px; cursor: pointer; color: ${isLiked ? '#ff3b5c' : '#ffffff'}; transition: background 0.2s;">
+      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="${isLiked ? 'currentColor' : 'none'}"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>${isLiked ? 'Loved' : 'Love'}</span>
+    </div>
+    <div class="menu-item add-item" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; font-size: 13px; cursor: pointer; color: #ffffff; transition: background 0.2s;">
+      <span style="font-size: 16px; font-weight:700; width: 16px; display: inline-block; text-align: center; line-height: 1;">+</span>
+      <span>Add to Folder</span>
+    </div>
+  `;
+
+  // Position the menu near the click coordinates
+  const rect = event.currentTarget.getBoundingClientRect();
+  let left = rect.left - 130;
+  let top = rect.bottom + 6;
+
+  // Keep menu on screen
+  if (left < 10) left = 10;
+  if (top + 100 > window.innerHeight) {
+    top = rect.top - 90;
+  }
+
+  menu.style.left = `${left}px`;
+  menu.style.top = `${top}px`;
+
+  document.body.appendChild(menu);
+
+  // Hover transitions
+  menu.querySelectorAll(".menu-item").forEach(item => {
+    item.style.transition = "background-color 0.2s";
+    item.addEventListener("mouseenter", () => item.style.backgroundColor = "rgba(255, 255, 255, 0.08)");
+    item.addEventListener("mouseleave", () => item.style.backgroundColor = "transparent");
+  });
+
+  // Click handler for Love
+  menu.querySelector(".fav-item").onclick = (e) => {
+    e.stopPropagation();
+    toggleLike(songId);
+    menu.remove();
+  };
+
+  // Click handler for Add to Folder
+  menu.querySelector(".add-item").onclick = (e) => {
+    e.stopPropagation();
+    showAddToFolderModal(songId, e);
+    menu.remove();
+  };
+
+  // Dismiss on clicking outside
+  const dismissMenu = (e) => {
+    if (!menu.contains(e.target) && e.target !== event.currentTarget) {
+      menu.remove();
+      document.removeEventListener("click", dismissMenu);
+    }
+  };
+  // Defer slightly so it doesn't close immediately on the click that opened it
+  setTimeout(() => {
+    document.addEventListener("click", dismissMenu);
+  }, 50);
 }
 
 function renderFolders() {
@@ -1502,7 +1562,7 @@ function createNewFolder(title, desc, cover) {
     id,
     title,
     desc: desc || "Custom user library compartment.",
-    cover: cover || "assets/bison image.jpg",
+    cover: cover || "assets/MV5BMTRiYjBkY2MtOTNlNC00ZWZmLWI2MWUtZTg3MGNhMzg4ZmIyXkEyXkFqcGc@._V1_QL75_UX223.5_.jpg",
     songIds: []
   };
 
