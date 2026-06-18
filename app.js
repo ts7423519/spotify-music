@@ -437,6 +437,84 @@ const SONGS_DATABASE = [
       { time: 10, text: "Playing Pavazha Malli Unplugged by Sai Abhyankkar..." },
       { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
     ]
+  },
+  {
+    id: 28,
+    title: "Adiye",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778496/Adiye-MassTamilan.fm_ufjlcy.mp3",
+    cover: "assets/image-1128572-x6b3324g19.avif",
+    duration: "4:02",
+    lyrics: [
+      { time: 0, text: "♪ (Adiye Intro) ♪" },
+      { time: 10, text: "Playing Adiye..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 29,
+    title: "Pachigalam Paravaigalam",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778495/Pachigalam-Paravaigalam-MassTamilan.fm_zv8aqu.mp3",
+    cover: "assets/image-1128572-x6b3324g19.avif",
+    duration: "3:45",
+    lyrics: [
+      { time: 0, text: "♪ (Pachigalam Paravaigalam Intro) ♪" },
+      { time: 10, text: "Playing Pachigalam Paravaigalam..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 30,
+    title: "Life Of Bachelor",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778481/Life-Of-Bachelor-MassTamilan.fm_zqnm1p.mp3",
+    cover: "assets/image-1128572-x6b3324g19.avif",
+    duration: "3:10",
+    lyrics: [
+      { time: 0, text: "♪ (Life Of Bachelor Intro) ♪" },
+      { time: 10, text: "Playing Life Of Bachelor..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 31,
+    title: "Kaadhal Kanmani",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778480/Kaadhal-Kanmani-MassTamilan.fm_mvynk9.mp3",
+    cover: "assets/image-1128572-x6b3324g19.avif",
+    duration: "4:15",
+    lyrics: [
+      { time: 0, text: "♪ (Kaadhal Kanmani Intro) ♪" },
+      { time: 10, text: "Playing Kaadhal Kanmani..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 32,
+    title: "Miss You Baby",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778469/Miss-You-Baby-MassTamilan.fm_a5zlpz.mp3",
+    cover: "assets/image-1128572-x6b3324g19.avif",
+    duration: "3:30",
+    lyrics: [
+      { time: 0, text: "♪ (Miss You Baby Intro) ♪" },
+      { time: 10, text: "Playing Miss You Baby..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 33,
+    title: "Kavan",
+    artist: "Various Artists",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778448/Kavan-MassTamilan.fm_jmwixz.mp3",
+    cover: "assets/image-1128572-x6b3324g19.avif",
+    duration: "4:00",
+    lyrics: [
+      { time: 0, text: "♪ (Kavan Intro) ♪" },
+      { time: 10, text: "Playing Kavan..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
   }
 ];
 
@@ -634,6 +712,7 @@ async function init() {
   updateHeaderLikedBadge();
   renderFolders();
   renderQuickAccessGrid();
+  renderAllSongsHome();
   renderSidebarFolders();
   renderSlits();
 
@@ -854,6 +933,19 @@ function loadLocalStorage() {
       abiFolder.songIds = [22, 23, 24, 25, 26, 27];
     }
 
+    const bachelorLoveFolder = folders.find(f => f.id === "folder_bachelor_love");
+    if (!bachelorLoveFolder) {
+      folders.push({
+        id: "folder_bachelor_love",
+        title: "Bachelor Love",
+        desc: "Custom curated collection containing your requested Bachelor Love tracks.",
+        cover: "assets/image-1128572-x6b3324g19.avif",
+        songIds: [28, 29, 30, 31, 32, 33]
+      });
+    } else if (!Array.isArray(bachelorLoveFolder.songIds) || bachelorLoveFolder.songIds.length === 0) {
+      bachelorLoveFolder.songIds = [28, 29, 30, 31, 32, 33];
+    }
+
     localStorage.setItem("spotify_folders", JSON.stringify(folders));
   } else {
     // Default pre-loaded folder holding all the 6 songs
@@ -899,6 +991,13 @@ function loadLocalStorage() {
         desc: "A curated collection of hits by Sai Abhyankkar.",
         cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
         songIds: [22, 23, 24, 25, 26, 27]
+      },
+      {
+        id: "folder_bachelor_love",
+        title: "Bachelor Love",
+        desc: "Custom curated collection containing your requested Bachelor Love tracks.",
+        cover: "assets/image-1128572-x6b3324g19.avif",
+        songIds: [28, 29, 30, 31, 32, 33]
       }
     ];
     localStorage.setItem("spotify_folders", JSON.stringify(folders));
@@ -1153,8 +1252,117 @@ function setupLikedSongsHeroBanner() {
   heroBanner.style.background = "linear-gradient(180deg, #2b118c 0%, var(--bg-base) 100%)";
 }
 
-function renderFolders() {
+function playSongDirect(songId) {
+  activeQueue = [...SONGS_DATABASE];
+  const idx = activeQueue.findIndex(s => s.id === songId);
+  currentQueueIndex = idx !== -1 ? idx : 0;
+  loadTrack(songId, true);
+}
+
+function createSongCardElement(song) {
+  const card = document.createElement("div");
+  card.className = "album-card song-card-item";
+  card.setAttribute("data-song-id", song.id);
+
+  const isLiked = likedSongs.includes(song.id);
+
+  card.innerHTML = `
+    <div class="card-img-container">
+      <img src="${song.cover}" alt="${song.title}" loading="lazy" onerror="this.src='assets/bison image.jpg'">
+      <button class="card-play-btn" title="Play Song">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M8 5v14l11-7z"></path>
+        </svg>
+      </button>
+    </div>
+    <h3>${song.title}</h3>
+    <p>${song.artist}</p>
+    <div class="song-card-actions" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+      <button class="song-card-action-btn song-card-fav-btn ${isLiked ? 'active-fav' : ''}" title="Like Song" style="background: transparent; border: none; color: ${isLiked ? '#ff3b5c' : 'var(--text-muted)'}; cursor: pointer; display: flex; align-items: center; padding: 4px; transition: color 0.2s, transform 0.2s;">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.2" fill="${isLiked ? 'currentColor' : 'none'}">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </button>
+      <button class="song-card-action-btn song-card-add-btn" title="Add to Folder" style="background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 16px; font-weight: 700; transition: color 0.2s; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
+        +
+      </button>
+    </div>
+  `;
+
+  // Click on card plays the song
+  card.addEventListener("click", (e) => {
+    if (e.target.closest(".song-card-action-btn") || e.target.closest(".card-play-btn")) return;
+    playSongDirect(song.id);
+  });
+
+  // Play button click
+  const playBtn = card.querySelector(".card-play-btn");
+  playBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    playSongDirect(song.id);
+  });
+
+  // Like button click
+  const favBtn = card.querySelector(".song-card-fav-btn");
+  favBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleLike(song.id);
+  });
+
+  // Add to Folder button click
+  const addBtn = card.querySelector(".song-card-add-btn");
+  addBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    showAddToFolderModal(song.id, e);
+  });
+
+  return card;
+}
+
+function renderAllSongsHome() {
+  if (!foldersGridHome) return;
   foldersGridHome.innerHTML = "";
+  SONGS_DATABASE.forEach(song => {
+    const card = createSongCardElement(song);
+    foldersGridHome.appendChild(card);
+  });
+  updateHomeSongsPlayingState();
+}
+
+function updateHomeSongsPlayingState() {
+  const activeSong = activeQueue[currentQueueIndex];
+  const allSongCards = document.querySelectorAll(".song-card-item");
+  allSongCards.forEach(card => {
+    const cardSongId = parseInt(card.getAttribute("data-song-id"), 10);
+    const titleEl = card.querySelector("h3");
+    const playIconSvg = card.querySelector(".card-play-btn svg");
+    
+    if (activeSong && cardSongId === activeSong.id) {
+      card.classList.add("song-playing");
+      card.style.borderColor = "var(--spotify-green)";
+      card.style.boxShadow = "0 0 15px rgba(29, 185, 84, 0.25)";
+      if (titleEl) titleEl.style.color = "var(--spotify-green)";
+      
+      if (playIconSvg) {
+        if (isPlaying) {
+          playIconSvg.innerHTML = `<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>`;
+        } else {
+          playIconSvg.innerHTML = `<path d="M8 5v14l11-7z"></path>`;
+        }
+      }
+    } else {
+      card.classList.remove("song-playing");
+      card.style.borderColor = "rgba(255, 255, 255, 0.08)";
+      card.style.boxShadow = "0 18px 40px rgba(0, 0, 0, 0.2)";
+      if (titleEl) titleEl.style.color = "var(--text-main)";
+      if (playIconSvg) {
+        playIconSvg.innerHTML = `<path d="M8 5v14l11-7z"></path>`;
+      }
+    }
+  });
+}
+
+function renderFolders() {
   foldersGridLibrary.innerHTML = "";
 
   const folderCount = folders.length;
@@ -1166,16 +1374,11 @@ function renderFolders() {
 
   if (folders.length === 0) {
     const emptyMsg = `<p style="color:var(--text-muted); grid-column:1/-1;">No library folders found. Create one to arrange your songs!</p>`;
-    foldersGridHome.innerHTML = emptyMsg;
     foldersGridLibrary.innerHTML = emptyMsg;
     return;
   }
 
   folders.forEach(folder => {
-    // Generate card for Home
-    const cardHome = createFolderCardElement(folder);
-    foldersGridHome.appendChild(cardHome);
-
     // Generate card for Library view
     const cardLib = createFolderCardElement(folder);
     foldersGridLibrary.appendChild(cardLib);
@@ -1646,6 +1849,7 @@ function loadTrack(songId, triggerPlay = true) {
   totalDurationLabel.textContent = song.duration;
 
   highlightActiveRow();
+  updateHomeSongsPlayingState();
   updateLyricsDisplay(0);
 
   // Set Dynamic Accent Colors depending on the track
@@ -1809,6 +2013,7 @@ function toggleLike(songId) {
 
   updateHeaderLikedBadge();
   renderQuickAccessGrid();
+  renderAllSongsHome();
 }
 
 function performSearch(query) {
@@ -1924,9 +2129,12 @@ function setupEventListeners() {
     navigate("liked-detail");
   });
 
-  document.getElementById("view-all-library-link").addEventListener("click", () => {
-    navigate("library");
-  });
+  const viewAllLibLink = document.getElementById("view-all-library-link");
+  if (viewAllLibLink) {
+    viewAllLibLink.addEventListener("click", () => {
+      navigate("library");
+    });
+  }
 
   // Header Liked button navigation
   const headerLikedBtn = document.getElementById("header-liked-btn");
@@ -2282,10 +2490,15 @@ function setupEventListeners() {
     slitsRefreshBtn.addEventListener("click", refreshSlits);
   }
 
-  // Update slit playing highlight whenever a new track loads
-  // (piggyback on audio events already handled elsewhere)
-  audio.addEventListener("play", updateSlitPlayingState);
-  audio.addEventListener("pause", updateSlitPlayingState);
+  // Update slit and home song playing highlights whenever a new track loads
+  audio.addEventListener("play", () => {
+    updateSlitPlayingState();
+    updateHomeSongsPlayingState();
+  });
+  audio.addEventListener("pause", () => {
+    updateSlitPlayingState();
+    updateHomeSongsPlayingState();
+  });
 
   // Mobile Bottom Navigation Click Listeners
   if (mobileNavHome) {

@@ -127,5 +127,55 @@
         "duration": "4:02"
       }
     ]
+  },
+  {
+    "id": "folder_bachelor_love",
+    "title": "Bachelor Love",
+    "desc": "Custom curated collection containing your requested Bachelor Love tracks.",
+    "cover": "assets/image-1128572-x6b3324g19.avif",
+    "songs": [
+      {
+        "title": "Adiye",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778496/Adiye-MassTamilan.fm_ufjlcy.mp3",
+        "cover": "assets/image-1128572-x6b3324g19.avif",
+        "duration": "4:02"
+      },
+      {
+        "title": "Pachigalam Paravaigalam",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778495/Pachigalam-Paravaigalam-MassTamilan.fm_zv8aqu.mp3",
+        "cover": "assets/image-1128572-x6b3324g19.avif",
+        "duration": "3:45"
+      },
+      {
+        "title": "Life Of Bachelor",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778481/Life-Of-Bachelor-MassTamilan.fm_zqnm1p.mp3",
+        "cover": "assets/image-1128572-x6b3324g19.avif",
+        "duration": "3:10"
+      },
+      {
+        "title": "Kaadhal Kanmani",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778480/Kaadhal-Kanmani-MassTamilan.fm_mvynk9.mp3",
+        "cover": "assets/image-1128572-x6b3324g19.avif",
+        "duration": "4:15"
+      },
+      {
+        "title": "Miss You Baby",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778469/Miss-You-Baby-MassTamilan.fm_a5zlpz.mp3",
+        "cover": "assets/image-1128572-x6b3324g19.avif",
+        "duration": "3:30"
+      },
+      {
+        "title": "Kavan",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778448/Kavan-MassTamilan.fm_jmwixz.mp3",
+        "cover": "assets/image-1128572-x6b3324g19.avif",
+        "duration": "4:00"
+      }
+    ]
   }
 ]
