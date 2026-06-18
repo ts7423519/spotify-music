@@ -1,7 +1,3 @@
-/* ==========================================================================
-   Spotify Web Player Clone - Core JavaScript
-   ========================================================================== */
-
 // Master Song Database (with the 6 provided Cloudinary URLs and Bison cover art)
 const SONGS_DATABASE = [
   {
@@ -363,6 +359,84 @@ const SONGS_DATABASE = [
       { time: 10, text: "Playing Oorum Blood Unplugged..." },
       { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
     ]
+  },
+  {
+    id: 22,
+    title: "Sithira Puthiri",
+    artist: "Sai Abhyankkar",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745871/Sithira-Puthiri-MassTamilan.dev_sxgg9z.mp3",
+    cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+    duration: "3:40",
+    lyrics: [
+      { time: 0, text: "♪ (Sithira Puthiri Intro) ♪" },
+      { time: 10, text: "Playing Sithira Puthiri by Sai Abhyankkar..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 23,
+    title: "Pavazha Malli",
+    artist: "Sai Abhyankkar",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745864/Pavazha_Malli_yxcpuz.mp3",
+    cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+    duration: "3:45",
+    lyrics: [
+      { time: 0, text: "♪ (Pavazha Malli Intro) ♪" },
+      { time: 10, text: "Playing Pavazha Malli by Sai Abhyankkar..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 24,
+    title: "Vizhi Veekura",
+    artist: "Sai Abhyankkar",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745855/Vizhi_Veekura_xyvvr2.mp3",
+    cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+    duration: "3:20",
+    lyrics: [
+      { time: 0, text: "♪ (Vizhi Veekura Intro) ♪" },
+      { time: 10, text: "Playing Vizhi Veekura by Sai Abhyankkar..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 25,
+    title: "Aasa Kooda",
+    artist: "Sai Abhyankkar",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745853/Aasa_Kooda_romdzh.mp3",
+    cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+    duration: "3:30",
+    lyrics: [
+      { time: 0, text: "♪ (Aasa Kooda Intro) ♪" },
+      { time: 10, text: "Playing Aasa Kooda by Sai Abhyankkar..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 26,
+    title: "Katchi Sera",
+    artist: "Sai Abhyankkar",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745846/Katchi_Sera_vchr5y.mp3",
+    cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+    duration: "3:15",
+    lyrics: [
+      { time: 0, text: "♪ (Katchi Sera Intro) ♪" },
+      { time: 10, text: "Playing Katchi Sera by Sai Abhyankkar..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 27,
+    title: "Pavazha Malli Unplugged",
+    artist: "Sai Abhyankkar",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745798/Pavazha_Malli_Unplugged_eb8mse.mp3",
+    cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+    duration: "4:02",
+    lyrics: [
+      { time: 0, text: "♪ (Pavazha Malli Unplugged Intro) ♪" },
+      { time: 10, text: "Playing Pavazha Malli Unplugged by Sai Abhyankkar..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
   }
 ];
 
@@ -474,9 +548,6 @@ const quickAccessGrid = document.getElementById("quick-access-grid");
 const headerBackBtn = document.getElementById("header-back-btn");
 const headerForwardBtn = document.getElementById("header-forward-btn");
 
-/* ==========================================================================
-   Initialization & Storage Logic
-   ========================================================================== */
 async function loadExternalSongs() {
   try {
     const response = await fetch("songs.json");
@@ -489,7 +560,7 @@ async function loadExternalSongs() {
 
     syncedAlbums.forEach(album => {
       const folderId = album.id || `folder_synced_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
-      
+
       // Check if folder is already present in memory
       let existingFolder = folders.find(f => f.id === folderId);
       const songIds = [];
@@ -501,7 +572,7 @@ async function loadExternalSongs() {
             // Find max ID in SONGS_DATABASE to assign next number
             const maxId = SONGS_DATABASE.reduce((max, s) => s.id > max ? s.id : max, -1);
             const newId = maxId + 1;
-            
+
             existingSong = {
               id: newId,
               title: song.title || "Unknown Title",
@@ -554,23 +625,20 @@ async function init() {
   await loadExternalSongs();
   setupEventListeners();
   updateVolumeSliders(audio.volume);
-  
+
   // Set initial queue
   activeQueue = [...SONGS_DATABASE];
   currentQueueIndex = 0;
   loadTrack(0, false); // load but don't autoplay initially
-  
+
+  updateHeaderLikedBadge();
   renderFolders();
   renderQuickAccessGrid();
   renderSidebarFolders();
   renderSlits();
-  
+
   navigate("home");
 }
-
-/* ==========================================================================
-   Slits — Apple Music-style horizontal "Listen Now" tiles
-   ========================================================================== */
 
 /** Load slits state from localStorage */
 function loadSlitsFromStorage() {
@@ -773,6 +841,19 @@ function loadLocalStorage() {
       gethuFolder.songIds = [15, 16, 17, 18, 19, 20, 21];
     }
 
+    const abiFolder = folders.find(f => f.id === "folder_abi_hits");
+    if (!abiFolder) {
+      folders.push({
+        id: "folder_abi_hits",
+        title: "Abi Hits",
+        desc: "A curated collection of hits by Sai Abhyankkar.",
+        cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+        songIds: [22, 23, 24, 25, 26, 27]
+      });
+    } else if (!Array.isArray(abiFolder.songIds) || abiFolder.songIds.length === 0) {
+      abiFolder.songIds = [22, 23, 24, 25, 26, 27];
+    }
+
     localStorage.setItem("spotify_folders", JSON.stringify(folders));
   } else {
     // Default pre-loaded folder holding all the 6 songs
@@ -811,6 +892,13 @@ function loadLocalStorage() {
         desc: "Custom collection containing your requested Gethu Vibes tracks.",
         cover: "assets/80873c6a-8ea3-4051-9bc2-9ce8b0dea2d4.jpg",
         songIds: [15, 16, 17, 18, 19, 20, 21]
+      },
+      {
+        id: "folder_abi_hits",
+        title: "Abi Hits",
+        desc: "A curated collection of hits by Sai Abhyankkar.",
+        cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+        songIds: [22, 23, 24, 25, 26, 27]
       }
     ];
     localStorage.setItem("spotify_folders", JSON.stringify(folders));
@@ -838,13 +926,13 @@ function loadUserState() {
       currentUser = { name: "Guest", verified: false };
     }
   }
-  
+
   if (!currentUser || typeof currentUser !== "object") {
     currentUser = { name: "Guest", verified: false };
   }
-  
+
   updateUserUI();
-  
+
   if (!currentUser.verified) {
     showLoginOverlay();
   } else {
@@ -902,9 +990,6 @@ function performLogin() {
   hideLoginOverlay();
 }
 
-/* ==========================================================================
-   View Routing & History Navigation
-   ========================================================================== */
 function navigate(viewName, folderId = null) {
   // Reset scroll container scroll position
   if (scrollContainer) {
@@ -921,7 +1006,7 @@ function navigate(viewName, folderId = null) {
   libraryView.style.display = "none";
   songTableContainer.style.display = "none";
   heroBanner.style.display = "none";
-  
+
   // Hide breadcrumb by default
   const breadcrumb = document.getElementById("folder-breadcrumb");
   if (breadcrumb) breadcrumb.style.display = "none";
@@ -930,7 +1015,7 @@ function navigate(viewName, folderId = null) {
   if (searchInputContainer) {
     searchInputContainer.style.display = (viewName === "search") ? "block" : "none";
   }
-  
+
   currentView = viewName;
   activeFolderId = folderId;
 
@@ -944,7 +1029,7 @@ function navigate(viewName, folderId = null) {
   if (mobileNavHome) mobileNavHome.classList.remove("active");
   if (mobileNavSearch) mobileNavSearch.classList.remove("active");
   if (mobileNavLibrary) mobileNavLibrary.classList.remove("active");
-  
+
   // Highlight sidebar folder item if needed
   const activeFolders = document.querySelectorAll(".sidebar-playlist-item");
   activeFolders.forEach(item => item.classList.remove("active-playlist"));
@@ -955,27 +1040,27 @@ function navigate(viewName, folderId = null) {
     homeView.style.display = "block";
     searchInput.value = "";
     clearSearchBtn.style.display = "none";
-  } 
+  }
   else if (viewName === "library") {
     navLibrary.classList.add("active");
     if (mobileNavLibrary) mobileNavLibrary.classList.add("active");
     libraryView.style.display = "block";
     renderFolders();
-  } 
+  }
   else if (viewName === "search") {
     navSearchLink.classList.add("active");
     if (mobileNavSearch) mobileNavSearch.classList.add("active");
     songTableContainer.style.display = "block";
     // Search results render into song-table-section
     performSearch(searchInput.value.trim());
-  } 
+  }
   else if (viewName === "liked-detail") {
     btnLikedSongs.classList.add("active");
     if (mobileNavLibrary) mobileNavLibrary.classList.add("active");
     setupLikedSongsHeroBanner();
     songTableContainer.style.display = "block";
     renderSongTable(likedSongs.map(id => SONGS_DATABASE.find(s => s.id === id)), "Liked Songs");
-  } 
+  }
   else if (viewName === "folder-detail" && folderId) {
     if (mobileNavLibrary) mobileNavLibrary.classList.add("active");
     const folder = folders.find(f => f.id === folderId);
@@ -1003,7 +1088,7 @@ function navigate(viewName, folderId = null) {
     viewHistory.push({ view: viewName, folderId });
     historyIndex = viewHistory.length - 1;
   }
-  
+
   updateHistoryButtonsUI();
 }
 
@@ -1044,16 +1129,13 @@ function goForward() {
   }
 }
 
-/* ==========================================================================
-   Hero Banners setups
-   ========================================================================== */
 function setupFolderHeroBanner(folder) {
   heroBanner.style.display = "flex";
   document.getElementById("hero-title").textContent = folder.title;
   document.getElementById("hero-desc").textContent = folder.desc || "No description provided.";
   document.getElementById("hero-song-count").textContent = `${folder.songIds.length} songs`;
   document.getElementById("hero-owner").textContent = "Music Library Folder";
-  
+
   // Set default bison gradient coloring
   document.documentElement.style.setProperty("--active-accent-color", "100, 110, 85");
   heroBanner.style.background = "var(--dynamic-gradient)";
@@ -1065,38 +1147,35 @@ function setupLikedSongsHeroBanner() {
   document.getElementById("hero-desc").textContent = "Your customized collection of liked folk hits.";
   document.getElementById("hero-song-count").textContent = `${likedSongs.length} songs`;
   document.getElementById("hero-owner").textContent = currentUser.name || "Spotify Lite";
-  
+
   // Dark blue heart-shaped gradient theme
   document.documentElement.style.setProperty("--active-accent-color", "69, 10, 245");
   heroBanner.style.background = "linear-gradient(180deg, #2b118c 0%, var(--bg-base) 100%)";
 }
 
-/* ==========================================================================
-   Library Folders management
-   ========================================================================== */
 function renderFolders() {
   foldersGridHome.innerHTML = "";
   foldersGridLibrary.innerHTML = "";
-  
+
   const folderCount = folders.length;
   const trackCount = folders.reduce((total, folder) => total + (Array.isArray(folder.songIds) ? folder.songIds.length : 0), 0);
   const folderCountEl = document.getElementById("library-folder-count");
   const trackCountEl = document.getElementById("library-track-count");
   if (folderCountEl) folderCountEl.textContent = folderCount;
   if (trackCountEl) trackCountEl.textContent = trackCount;
-  
+
   if (folders.length === 0) {
     const emptyMsg = `<p style="color:var(--text-muted); grid-column:1/-1;">No library folders found. Create one to arrange your songs!</p>`;
     foldersGridHome.innerHTML = emptyMsg;
     foldersGridLibrary.innerHTML = emptyMsg;
     return;
   }
-  
+
   folders.forEach(folder => {
     // Generate card for Home
     const cardHome = createFolderCardElement(folder);
     foldersGridHome.appendChild(cardHome);
-    
+
     // Generate card for Library view
     const cardLib = createFolderCardElement(folder);
     foldersGridLibrary.appendChild(cardLib);
@@ -1106,7 +1185,7 @@ function renderFolders() {
 function createFolderCardElement(folder) {
   const card = document.createElement("div");
   card.className = "album-card";
-  
+
   card.innerHTML = `
     <div class="card-img-container">
       <img src="${folder.cover}" alt="${folder.title}">
@@ -1125,13 +1204,13 @@ function createFolderCardElement(folder) {
       ` : ''}
     </div>
   `;
-  
+
   // Navigate to folder detail on card click
   card.addEventListener("click", (e) => {
     if (e.target.closest(".card-delete-btn")) return;
     navigate("folder-detail", folder.id);
   });
-  
+
   // Play folder playlist on card play button click
   const playBtn = card.querySelector(".card-play-btn");
   playBtn.addEventListener("click", (e) => {
@@ -1147,7 +1226,7 @@ function createFolderCardElement(folder) {
       deleteFolder(folder.id);
     });
   }
-  
+
   return card;
 }
 
@@ -1172,13 +1251,23 @@ function renderSidebarFolders() {
 
 function renderQuickAccessGrid() {
   quickAccessGrid.innerHTML = "";
-  
-  // Pick first 6 songs from master database
-  const quickSongs = SONGS_DATABASE.slice(0, 6);
-  quickSongs.forEach((song, idx) => {
+
+  if (likedSongs.length === 0) {
+    quickAccessGrid.innerHTML = `
+      <div style="flex: 1; padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.08); width: 100%; min-width: 280px; margin: 4px;">
+        No liked songs yet. Click the heart icon on any track to add it here!
+      </div>
+    `;
+    return;
+  }
+
+  likedSongs.forEach((songId) => {
+    const song = SONGS_DATABASE.find(s => s.id === songId);
+    if (!song) return;
+
     const card = document.createElement("div");
     card.className = "quick-access-card";
-    
+
     card.innerHTML = `
       <img src="${song.cover}" alt="${song.title}">
       <div class="quick-access-card-text">
@@ -1189,23 +1278,22 @@ function renderQuickAccessGrid() {
         <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
       </button>
     `;
-    
+
     card.addEventListener("click", () => {
-      activeQueue = [...SONGS_DATABASE];
-      currentQueueIndex = song.id;
+      activeQueue = likedSongs.map(id => SONGS_DATABASE.find(s => s.id === id)).filter(Boolean);
+      const idx = activeQueue.findIndex(s => s.id === song.id);
+      currentQueueIndex = idx !== -1 ? idx : 0;
       loadTrack(song.id);
       playTrack();
     });
-    
+
     quickAccessGrid.appendChild(card);
   });
 }
 
-
-
 function createNewFolder(title, desc, cover) {
   if (!title) return;
-  
+
   const id = "folder_" + Date.now();
   const newFolder = {
     id,
@@ -1214,7 +1302,7 @@ function createNewFolder(title, desc, cover) {
     cover: cover || "assets/bison image.jpg",
     songIds: []
   };
-  
+
   folders.push(newFolder);
   saveFoldersToStorage();
   renderFolders();
@@ -1246,17 +1334,14 @@ function playFolderSongs(folderId) {
   }
 }
 
-/* ==========================================================================
-   Modal components for adding songs to folders
-   ========================================================================== */
 function showAddToFolderModal(songId, event) {
   // Prevent click bubbling
   event.stopPropagation();
-  
+
   // Close any existing modal
   const existingModal = document.getElementById("add-folder-modal");
   if (existingModal) existingModal.remove();
-  
+
   const modal = document.createElement("div");
   modal.id = "add-folder-modal";
   modal.style.cssText = `
@@ -1273,7 +1358,7 @@ function showAddToFolderModal(songId, event) {
     max-width: 90%;
     padding: 20px;
   `;
-  
+
   let foldersListHtml = "";
   if (folders.length === 0) {
     foldersListHtml = "<p style='color:#b3b3b3; font-size:13px; margin: 10px 0;'>Create a library folder first!</p>";
@@ -1303,7 +1388,7 @@ function showAddToFolderModal(songId, event) {
       `;
     });
   }
-  
+
   modal.innerHTML = `
     <h3 style="font-size: 15px; margin-bottom: 12px; color: #fff; font-family:'Plus Jakarta Sans',sans-serif;">Add Song to Folder</h3>
     <div style="max-height: 200px; overflow-y: auto; margin-bottom: 16px;">
@@ -1321,9 +1406,9 @@ function showAddToFolderModal(songId, event) {
       ">Cancel</button>
     </div>
   `;
-  
+
   document.body.appendChild(modal);
-  
+
   // Backdrop overlay to dismiss modal
   const backdrop = document.createElement("div");
   backdrop.id = "add-folder-modal-backdrop";
@@ -1334,15 +1419,15 @@ function showAddToFolderModal(songId, event) {
     z-index: 999;
   `;
   document.body.appendChild(backdrop);
-  
+
   const closeModal = () => {
     modal.remove();
     backdrop.remove();
   };
-  
+
   backdrop.addEventListener("click", closeModal);
   modal.querySelector("#modal-close-btn").addEventListener("click", closeModal);
-  
+
   // Row clicks logic
   modal.querySelectorAll(".modal-folder-row").forEach(row => {
     row.addEventListener("click", () => {
@@ -1364,7 +1449,7 @@ function showAddToFolderModal(songId, event) {
           row.querySelector("span:last-child").style.color = "#b3b3b3";
           row.querySelector("span:last-child").style.fontWeight = "normal";
         }
-        
+
         // Refresh details table if active
         if (currentView === "folder-detail" && activeFolderId === folderId) {
           const folderSongs = folder.songIds.map(id => SONGS_DATABASE.find(s => s.id === id)).filter(Boolean);
@@ -1375,26 +1460,23 @@ function showAddToFolderModal(songId, event) {
   });
 }
 
-/* ==========================================================================
-   Song Rendering Table Controls
-   ========================================================================== */
 function renderSongTable(songsList, folderTitle = "Songs") {
   songListBody.innerHTML = "";
-  
+
   if (songsList.length === 0) {
     songListBody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: var(--text-muted); padding: 60px 0;">No songs in this view.</td></tr>`;
     return;
   }
-  
+
   songsList.forEach((song, index) => {
     const row = document.createElement("tr");
     row.className = "song-row";
     row.id = `song-row-${song.id}`;
     row.dataset.songId = song.id;
     row.dataset.listIndex = index;
-    
+
     const isLiked = likedSongs.includes(song.id);
-    
+
     row.innerHTML = `
       <td class="col-num">
         <div class="track-index-col">
@@ -1431,7 +1513,7 @@ function renderSongTable(songsList, folderTitle = "Songs") {
         </div>
       </td>
     `;
-    
+
     // Add folder button hover display rule
     row.addEventListener("mouseenter", () => {
       row.querySelector(".row-add-folder-btn").style.opacity = 1;
@@ -1439,7 +1521,7 @@ function renderSongTable(songsList, folderTitle = "Songs") {
     row.addEventListener("mouseleave", () => {
       row.querySelector(".row-add-folder-btn").style.opacity = 0;
     });
-    
+
     // Play row on double click or cell click (excluding buttons)
     row.addEventListener("click", (e) => {
       if (e.target.closest(".row-fav-btn") || e.target.closest(".row-add-folder-btn") || e.target.closest(".row-play-btn")) return;
@@ -1455,14 +1537,14 @@ function renderSongTable(songsList, folderTitle = "Songs") {
       e.stopPropagation();
       toggleLike(song.id);
     });
-    
+
     row.querySelector(".row-add-folder-btn").addEventListener("click", (e) => {
       showAddToFolderModal(song.id, e);
     });
-    
+
     songListBody.appendChild(row);
   });
-  
+
   highlightActiveRow();
 }
 
@@ -1470,7 +1552,7 @@ function playRowSong(list, index) {
   activeQueue = [...list];
   currentQueueIndex = index;
   const song = activeQueue[index];
-  
+
   loadTrack(song.id);
   playTrack();
 }
@@ -1478,13 +1560,13 @@ function playRowSong(list, index) {
 function highlightActiveRow() {
   const rows = document.querySelectorAll(".song-row");
   const playingSong = activeQueue[currentQueueIndex];
-  
+
   rows.forEach((row) => {
     const songId = parseInt(row.dataset.songId);
     row.classList.remove("active-row", "playing-row");
-    
+
     const pbtn = row.querySelector(".row-play-btn svg");
-    
+
     if (playingSong && songId === playingSong.id) {
       row.classList.add("active-row");
       if (isPlaying) {
@@ -1499,23 +1581,20 @@ function highlightActiveRow() {
   });
 }
 
-/* ==========================================================================
-   Audio Loading & Playback Controls
-   ========================================================================== */
 function loadTrack(songId, triggerPlay = true) {
   const song = SONGS_DATABASE.find(s => s.id === songId);
   if (!song) return;
-  
+
   audio.src = song.url;
   audio.load();
-  
+
   // Set meta track fields
   playerTrackCover.src = song.cover;
   playerTrackTitle.textContent = song.title;
   playerTrackArtist.textContent = song.artist;
   sidebarArtImg.src = song.cover;
   visualizerTrackName.textContent = song.title;
-  
+
   // Update full screen player elements
   const fsCover = document.getElementById("fs-player-track-cover");
   const fsTitle = document.getElementById("fs-player-track-title");
@@ -1533,7 +1612,7 @@ function loadTrack(songId, triggerPlay = true) {
   if (fsSeekBar) fsSeekBar.value = 0;
   if (fsProgressFill) fsProgressFill.style.width = "0%";
   if (fsCurrentTime) fsCurrentTime.textContent = "0:00";
-  
+
   // Handle text scrolling marquee
   const titleWrapper = document.querySelector(".track-title-wrapper");
   if (song.title.length > 20) {
@@ -1541,7 +1620,7 @@ function loadTrack(songId, triggerPlay = true) {
   } else {
     titleWrapper.classList.remove("marquee");
   }
-  
+
   // Update heart active indicators
   const isLiked = likedSongs.includes(song.id);
   if (isLiked) {
@@ -1559,16 +1638,16 @@ function loadTrack(songId, triggerPlay = true) {
       fsFavBtn.querySelector("svg").setAttribute("fill", "none");
     }
   }
-  
+
   // Reset seek sliders
   seekBar.value = 0;
   progressTrackFill.style.width = "0%";
   currentTimeLabel.textContent = "0:00";
   totalDurationLabel.textContent = song.duration;
-  
+
   highlightActiveRow();
   updateLyricsDisplay(0);
-  
+
   // Set Dynamic Accent Colors depending on the track
   // (We use HSL gradients mimicking Spotify cover color matches)
   const hslVals = [
@@ -1617,34 +1696,34 @@ function togglePlayPause() {
 
 function nextTrack() {
   if (activeQueue.length === 0) return;
-  
+
   let nextIndex;
   if (isShuffle) {
     nextIndex = Math.floor(Math.random() * activeQueue.length);
   } else {
     nextIndex = (currentQueueIndex + 1) % activeQueue.length;
   }
-  
+
   currentQueueIndex = nextIndex;
   loadTrack(activeQueue[nextIndex].id);
 }
 
 function prevTrack() {
   if (activeQueue.length === 0) return;
-  
+
   // If track is >3s, restart it instead of prev track
   if (audio.currentTime > 3) {
     audio.currentTime = 0;
     return;
   }
-  
+
   let prevIndex;
   if (isShuffle) {
     prevIndex = Math.floor(Math.random() * activeQueue.length);
   } else {
     prevIndex = (currentQueueIndex - 1 + activeQueue.length) % activeQueue.length;
   }
-  
+
   currentQueueIndex = prevIndex;
   loadTrack(activeQueue[prevIndex].id);
 }
@@ -1661,7 +1740,7 @@ function toggleRepeat() {
   const badge = document.getElementById("repeat-badge");
   const fsRepeatBtn = document.getElementById("fs-repeat-btn");
   const fsBadge = document.getElementById("fs-repeat-badge");
-  
+
   if (isRepeat === 0) {
     repeatBtn.classList.remove("active");
     badge.style.display = "none";
@@ -1688,13 +1767,10 @@ function toggleRepeat() {
   }
 }
 
-/* ==========================================================================
-   Like / Favorite Song management
-   ========================================================================== */
 function toggleLike(songId) {
   const idx = likedSongs.indexOf(songId);
   const song = SONGS_DATABASE.find(s => s.id === songId);
-  
+
   if (idx === -1) {
     likedSongs.push(songId);
     // Trigger pop micro-animation if target exists
@@ -1703,9 +1779,9 @@ function toggleLike(songId) {
   } else {
     likedSongs.splice(idx, 1);
   }
-  
+
   saveLikesToStorage();
-  
+
   // Update main player bar like
   const currentPlaying = activeQueue[currentQueueIndex];
   if (currentPlaying && currentPlaying.id === songId) {
@@ -1713,7 +1789,7 @@ function toggleLike(songId) {
     playerFavBtn.classList.toggle("active-fav", isLiked);
     playerFavBtn.querySelector("svg").setAttribute("fill", isLiked ? "currentColor" : "none");
   }
-  
+
   // If in Liked detail page, reload list to remove disliked item
   if (currentView === "liked-detail") {
     setupLikedSongsHeroBanner();
@@ -1730,26 +1806,25 @@ function toggleLike(songId) {
       performSearch(searchInput.value.trim());
     }
   }
-}
 
-/* ==========================================================================
-   Search Functionality
-   ========================================================================== */
+  updateHeaderLikedBadge();
+  renderQuickAccessGrid();
+}
 
 function performSearch(query) {
   emptySearchState.style.display = "none";
   document.querySelector(".song-table").style.display = "table";
-  
+
   if (!query) {
     renderSongTable(SONGS_DATABASE, "All Songs");
     return;
   }
-  
+
   const searchResults = SONGS_DATABASE.filter(song => {
     return song.title.toLowerCase().includes(query.toLowerCase()) ||
            song.artist.toLowerCase().includes(query.toLowerCase());
   });
-  
+
   if (searchResults.length > 0) {
     renderSongTable(searchResults, `Search results for: "${query}"`);
   } else {
@@ -1759,9 +1834,6 @@ function performSearch(query) {
   }
 }
 
-/* ==========================================================================
-   Lyrics Preview Rendering
-   ========================================================================== */
 function updateLyricsDisplay(seconds) {
   const song = activeQueue[currentQueueIndex];
   if (!song || !song.lyrics) {
@@ -1770,10 +1842,10 @@ function updateLyricsDisplay(seconds) {
     lyricLine3.textContent = "";
     return;
   }
-  
+
   const lyrics = song.lyrics;
   let activeIndex = -1;
-  
+
   // Find current active lyric line
   for (let i = 0; i < lyrics.length; i++) {
     if (seconds >= lyrics[i].time) {
@@ -1782,12 +1854,12 @@ function updateLyricsDisplay(seconds) {
       break;
     }
   }
-  
+
   if (activeIndex === -1) {
     lyricLine1.textContent = "♪ Listening to " + song.title + " ♪";
     lyricLine2.textContent = lyrics[0] ? lyrics[0].text : "";
     lyricLine3.textContent = lyrics[1] ? lyrics[1].text : "";
-    
+
     lyricLine1.className = "lyric-line active-lyric";
     lyricLine2.className = "lyric-line";
     lyricLine3.className = "lyric-line";
@@ -1795,16 +1867,13 @@ function updateLyricsDisplay(seconds) {
     lyricLine1.textContent = lyrics[activeIndex - 1] ? lyrics[activeIndex - 1].text : "";
     lyricLine2.textContent = lyrics[activeIndex].text;
     lyricLine3.textContent = lyrics[activeIndex + 1] ? lyrics[activeIndex + 1].text : "";
-    
+
     lyricLine1.className = "lyric-line";
     lyricLine2.className = "lyric-line active-lyric";
     lyricLine3.className = "lyric-line";
   }
 }
 
-/* ==========================================================================
-   Visualizer Controls (CSS Height modulation simulating waves)
-   ========================================================================== */
 function startVisualizer() {
   visualizerBars.classList.add("animating");
 }
@@ -1821,7 +1890,7 @@ function stopVisualizer() {
 function modulateVisualizerBars() {
   if (!isPlaying) return;
   const bars = visualizerBars.querySelectorAll(".bar");
-  
+
   // Add some realistic random jitter overlay to the visualizer bars keyframes
   bars.forEach((bar, idx) => {
     // Generate heights between 15% and 95%
@@ -1832,47 +1901,57 @@ function modulateVisualizerBars() {
   });
 }
 
-/* ==========================================================================
-   Event Handlers Setup
-   ========================================================================== */
 function setupEventListeners() {
   // Navigation sidebar item triggers
   navHome.addEventListener("click", (e) => {
     e.preventDefault();
     navigate("home");
   });
-  
+
   navSearchLink.addEventListener("click", (e) => {
     e.preventDefault();
     navigate("search");
     searchInput.focus();
   });
-  
+
   navLibrary.addEventListener("click", (e) => {
     e.preventDefault();
     navigate("library");
   });
-  
+
   btnLikedSongs.addEventListener("click", (e) => {
     e.preventDefault();
     navigate("liked-detail");
   });
-  
+
   document.getElementById("view-all-library-link").addEventListener("click", () => {
     navigate("library");
   });
+
+  // Header Liked button navigation
+  const headerLikedBtn = document.getElementById("header-liked-btn");
+  if (headerLikedBtn) {
+    headerLikedBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate("liked-detail");
+    });
+  }
 
   // Play all liked songs button
   const quickAccessPlayAllBtn = document.getElementById("quick-access-play-all");
   if (quickAccessPlayAllBtn) {
     quickAccessPlayAllBtn.addEventListener("click", () => {
-      activeQueue = [...SONGS_DATABASE.slice(0, 6)];
-      currentQueueIndex = 0;
-      loadTrack(activeQueue[0].id);
-      playTrack();
+      if (likedSongs.length > 0) {
+        activeQueue = likedSongs.map(id => SONGS_DATABASE.find(s => s.id === id)).filter(Boolean);
+        currentQueueIndex = 0;
+        loadTrack(activeQueue[0].id);
+        playTrack();
+      } else {
+        alert("You don't have any liked songs yet!");
+      }
     });
   }
-  
+
   // Header Navigation Arrows
   if (headerBackBtn) headerBackBtn.addEventListener("click", goBack);
   if (headerForwardBtn) headerForwardBtn.addEventListener("click", goForward);
@@ -1883,7 +1962,7 @@ function setupEventListeners() {
   nextBtn.addEventListener("click", nextTrack);
   shuffleBtn.addEventListener("click", toggleShuffle);
   repeatBtn.addEventListener("click", toggleRepeat);
-  
+
   // Track heart save button
   playerFavBtn.addEventListener("click", () => {
     const currentPlaying = activeQueue[currentQueueIndex];
@@ -2007,31 +2086,31 @@ function setupEventListeners() {
 
   audio.addEventListener("timeupdate", () => {
     if (!audio.duration) return;
-    
+
     // Calculate timeline position percent
     const pct = (audio.currentTime / audio.duration) * 100;
     seekBar.value = pct;
     progressTrackFill.style.width = `${pct}%`;
     seekBar.parentElement.style.setProperty("--thumb-offset", `${pct}%`);
-    
+
     currentTimeLabel.textContent = formatTime(audio.currentTime);
-    
+
     // Sync full screen player seek bar
     const fsSeekBar = document.getElementById("fs-seek-bar");
     const fsProgressFill = document.getElementById("fs-progress-track-fill");
     const fsCurrentTime = document.getElementById("fs-current-time");
-    
+
     if (fsSeekBar) {
       fsSeekBar.value = pct;
       fsSeekBar.parentElement.style.setProperty("--thumb-offset", `${pct}%`);
     }
     if (fsProgressFill) fsProgressFill.style.width = `${pct}%`;
     if (fsCurrentTime) fsCurrentTime.textContent = formatTime(audio.currentTime);
-    
+
     updateLyricsDisplay(audio.currentTime);
     modulateVisualizerBars();
   });
-  
+
   audio.addEventListener("loadedmetadata", () => {
     totalDurationLabel.textContent = formatTime(audio.duration);
     const fsTotalDuration = document.getElementById("fs-total-duration");
@@ -2046,7 +2125,7 @@ function setupEventListeners() {
     progressTrackFill.style.width = `${e.target.value}%`;
     seekBar.parentElement.style.setProperty("--thumb-offset", `${e.target.value}%`);
     currentTimeLabel.textContent = formatTime(seekTo);
-    
+
     // Sync full screen seek bar too
     const fsSeekBar = document.getElementById("fs-seek-bar");
     const fsProgressFill = document.getElementById("fs-progress-track-fill");
@@ -2085,7 +2164,7 @@ function setupEventListeners() {
     const state = extraFeaturesSection.style.display === "grid";
     extraFeaturesSection.style.display = state ? "none" : "grid";
     lyricsToggle.classList.toggle("active-util", !state);
-    
+
     // Smooth scroll down to lyrics view if opened
     if (!state) {
       setTimeout(() => {
@@ -2098,7 +2177,7 @@ function setupEventListeners() {
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.trim();
     clearSearchBtn.style.display = query ? "block" : "none";
-    
+
     // Debounce search index parsing
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(() => {
@@ -2109,7 +2188,7 @@ function setupEventListeners() {
       }
     }, 250);
   });
-  
+
   clearSearchBtn.addEventListener("click", () => {
     searchInput.value = "";
     clearSearchBtn.style.display = "none";
@@ -2121,7 +2200,7 @@ function setupEventListeners() {
     const query = sidebarSearchInput.value.trim();
     searchInput.value = query;
     clearSearchBtn.style.display = query ? "block" : "none";
-    
+
     if (currentView !== "search") {
       navigate("search");
     } else {
@@ -2172,8 +2251,6 @@ function setupEventListeners() {
 
   createFolderBtnSidebar.addEventListener("click", openCreateFolderModal);
   createFolderBtnMain.addEventListener("click", openCreateFolderModal);
-
-
 
   // Scrolled header state
   scrollContainer.addEventListener("scroll", () => {
@@ -2311,15 +2388,15 @@ function setupEventListeners() {
           likedSongs.push(currentSong.id);
         }
         saveUserState();
-        
+
         // Sync favorite UI on both buttons
         const isLiked = likedSongs.includes(currentSong.id);
         playerFavBtn.classList.toggle("active-fav", isLiked);
         playerFavBtn.querySelector("svg").setAttribute("fill", isLiked ? "currentColor" : "none");
-        
+
         fsFavBtn.classList.toggle("active-fav", isLiked);
         fsFavBtn.querySelector("svg").setAttribute("fill", isLiked ? "currentColor" : "none");
-        
+
         renderFolders();
       }
     });
@@ -2338,7 +2415,7 @@ function setupEventListeners() {
       if (fsProgressFill) fsProgressFill.style.width = `${e.target.value}%`;
       fsSeekBar.parentElement.style.setProperty("--thumb-offset", `${e.target.value}%`);
       if (fsCurrentTime) fsCurrentTime.textContent = formatTime(seekTo);
-      
+
       // sync main seek bar
       seekBar.value = e.target.value;
       progressTrackFill.style.width = `${e.target.value}%`;
@@ -2348,9 +2425,6 @@ function setupEventListeners() {
   }
 }
 
-/* ==========================================================================
-   Helper Utilities
-   ========================================================================== */
 function formatTime(seconds) {
   if (isNaN(seconds)) return "0:00";
   const mins = Math.floor(seconds / 60);
@@ -2364,7 +2438,7 @@ function updateVolumeSliders(value) {
   volumeTrackFill.style.width = `${pct}%`;
   volumeSlider.value = value;
   volumeSlider.parentElement.style.setProperty("--thumb-offset", `${pct}%`);
-  
+
   if (value === 0) {
     volHighIcon.style.display = "none";
     volLowIcon.style.display = "none";
@@ -2386,7 +2460,7 @@ function togglePlayBtnUI(playing) {
   const heroPlayIcon = document.getElementById("hero-play-btn").querySelector("svg path");
   const fsPlayIcon = document.getElementById("fs-play-icon");
   const fsPauseIcon = document.getElementById("fs-pause-icon");
-  
+
   if (playing) {
     playIcon.style.display = "none";
     pauseIcon.style.display = "block";
@@ -2399,6 +2473,13 @@ function togglePlayBtnUI(playing) {
     if (fsPlayIcon) fsPlayIcon.style.display = "block";
     if (fsPauseIcon) fsPauseIcon.style.display = "none";
     if (heroPlayIcon) heroPlayIcon.setAttribute("d", "M8 5v14l11-7z"); // play icon
+  }
+}
+
+function updateHeaderLikedBadge() {
+  const badge = document.getElementById("header-liked-badge");
+  if (badge) {
+    badge.textContent = likedSongs.length;
   }
 }
 

@@ -77,5 +77,55 @@
         "duration": "4:25"
       }
     ]
-
+  },
+  {
+    "id": "folder_abi_hits",
+    "title": "Abi Hits",
+    "desc": "A curated collection of hits by Sai Abhyankkar.",
+    "cover": "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+    "songs": [
+      {
+        "title": "Sithira Puthiri",
+        "artist": "Sai Abhyankkar",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745871/Sithira-Puthiri-MassTamilan.dev_sxgg9z.mp3",
+        "cover": "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+        "duration": "3:40"
+      },
+      {
+        "title": "Pavazha Malli",
+        "artist": "Sai Abhyankkar",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745864/Pavazha_Malli_yxcpuz.mp3",
+        "cover": "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+        "duration": "3:45"
+      },
+      {
+        "title": "Vizhi Veekura",
+        "artist": "Sai Abhyankkar",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745855/Vizhi_Veekura_xyvvr2.mp3",
+        "cover": "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+        "duration": "3:20"
+      },
+      {
+        "title": "Aasa Kooda",
+        "artist": "Sai Abhyankkar",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745853/Aasa_Kooda_romdzh.mp3",
+        "cover": "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+        "duration": "3:30"
+      },
+      {
+        "title": "Katchi Sera",
+        "artist": "Sai Abhyankkar",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745846/Katchi_Sera_vchr5y.mp3",
+        "cover": "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+        "duration": "3:15"
+      },
+      {
+        "title": "Pavazha Malli Unplugged",
+        "artist": "Sai Abhyankkar",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745798/Pavazha_Malli_Unplugged_eb8mse.mp3",
+        "cover": "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
+        "duration": "4:02"
+      }
+    ]
+  }
 ]
