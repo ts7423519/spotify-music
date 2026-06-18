@@ -454,9 +454,9 @@ const SONGS_DATABASE = [
   {
     id: 29,
     title: "Pachigalam Paravaigalam",
-    artist: "Various Artists",
+    artist: "A.R. Rahman",
     url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778495/Pachigalam-Paravaigalam-MassTamilan.fm_zv8aqu.mp3",
-    cover: "assets/image-1128572-x6b3324g19.avif",
+    cover: "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
     duration: "3:45",
     lyrics: [
       { time: 0, text: "♪ (Pachigalam Paravaigalam Intro) ♪" },
@@ -513,6 +513,149 @@ const SONGS_DATABASE = [
     lyrics: [
       { time: 0, text: "♪ (Kavan Intro) ♪" },
       { time: 10, text: "Playing Kavan..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 34,
+    title: "Endhira Logathu Sundhariye",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784777/Endhira-Logathu-Sundhariye-MassTamilan.com_ravqgh.mp3",
+    cover: "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+    duration: "5:30",
+    lyrics: [
+      { time: 0, text: "♪ (Endhira Logathu Sundhariye Intro) ♪" },
+      { time: 10, text: "Playing Endhira Logathu Sundhariye..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 35,
+    title: "Raajali Nee Gaali",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784787/Raajali-Nee-Gaali-MassTamilan.com_wcp1cr.mp3",
+    cover: "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+    duration: "4:12",
+    lyrics: [
+      { time: 0, text: "♪ (Raajali Nee Gaali Intro) ♪" },
+      { time: 10, text: "Playing Raajali Nee Gaali..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 36,
+    title: "Kalaarasiga",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784923/Kalaarasiga_pqc1wn.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "4:50",
+    lyrics: [
+      { time: 0, text: "♪ (Kalaarasiga Intro) ♪" },
+      { time: 10, text: "Playing Kalaarasiga..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 37,
+    title: "Ambikapathy",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784900/Ambikapathy_h4kjl2.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "3:40",
+    lyrics: [
+      { time: 0, text: "♪ (Ambikapathy Intro) ♪" },
+      { time: 10, text: "Playing Ambikapathy..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 38,
+    title: "Unnaal Unnaal",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784893/Unnaal-Unnaal_t3rfhk.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "5:01",
+    lyrics: [
+      { time: 0, text: "♪ (Unnaal Unnaal Intro) ♪" },
+      { time: 10, text: "Playing Unnaal Unnaal..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 39,
+    title: "Parakka Seivaai",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784878/Parakka-Seivaai_h6lsus.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "4:24",
+    lyrics: [
+      { time: 0, text: "♪ (Parakka Seivaai Intro) ♪" },
+      { time: 10, text: "Playing Parakka Seivaai..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 40,
+    title: "Oliyaaga Vandhaai",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784876/Oliyaaga-Vandhaai_qi8ks4.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "4:15",
+    lyrics: [
+      { time: 0, text: "♪ (Oliyaaga Vandhaai Intro) ♪" },
+      { time: 10, text: "Playing Oliyaaga Vandhaai..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 41,
+    title: "Solvadhai Seidhu Mudippom",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784842/Solvadhai-Seidhu-Mudippom_rkkysc.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "3:58",
+    lyrics: [
+      { time: 0, text: "♪ (Solvadhai Seidhu Mudippom Intro) ♪" },
+      { time: 10, text: "Playing Solvadhai Seidhu Mudippom..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 42,
+    title: "Kanaave Kanaave",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784835/Kanaave-Kanaave_vgvoen.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "4:47",
+    lyrics: [
+      { time: 0, text: "♪ (Kanaave Kanaave Intro) ♪" },
+      { time: 10, text: "Playing Kanaave Kanaave..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 43,
+    title: "Paarkaadhey Oru Madhiri",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784825/Paarkaadhey-Oru-Madhiri_qh5vet.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "4:30",
+    lyrics: [
+      { time: 0, text: "♪ (Paarkaadhey Oru Madhiri Intro) ♪" },
+      { time: 10, text: "Playing Paarkaadhey Oru Madhiri..." },
+      { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
+    ]
+  },
+  {
+    id: 44,
+    title: "The Land Of Shiva",
+    artist: "A.R. Rahman",
+    url: "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784796/The-Land-Of-Shiva_hcpxmw.mp3",
+    cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    duration: "3:10",
+    lyrics: [
+      { time: 0, text: "♪ (The Land Of Shiva Intro) ♪" },
+      { time: 10, text: "Playing The Land Of Shiva..." },
       { time: 30, text: "♪ Enjoy the music on Spotify Lite! ♪" }
     ]
   }
@@ -927,10 +1070,19 @@ function loadLocalStorage() {
         title: "Abi Hits",
         desc: "A curated collection of hits by Sai Abhyankkar.",
         cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
-        songIds: [22, 23, 24, 25, 26, 27]
+        songIds: [22, 23, 24, 25, 26, 27, 9, 10, 11, 12, 13, 14]
       });
-    } else if (!Array.isArray(abiFolder.songIds) || abiFolder.songIds.length === 0) {
-      abiFolder.songIds = [22, 23, 24, 25, 26, 27];
+    } else {
+      const requiredIds = [22, 23, 24, 25, 26, 27, 9, 10, 11, 12, 13, 14];
+      if (!Array.isArray(abiFolder.songIds)) {
+        abiFolder.songIds = requiredIds;
+      } else {
+        requiredIds.forEach(id => {
+          if (!abiFolder.songIds.includes(id)) {
+            abiFolder.songIds.push(id);
+          }
+        });
+      }
     }
 
     const bachelorLoveFolder = folders.find(f => f.id === "folder_bachelor_love");
@@ -944,6 +1096,45 @@ function loadLocalStorage() {
       });
     } else if (!Array.isArray(bachelorLoveFolder.songIds) || bachelorLoveFolder.songIds.length === 0) {
       bachelorLoveFolder.songIds = [28, 29, 30, 31, 32, 33];
+    }
+
+    const arRahmanFolder = folders.find(f => f.id === "folder_ar_rahman");
+    if (!arRahmanFolder) {
+      folders.push({
+        id: "folder_ar_rahman",
+        title: "A.R. Rahman",
+        desc: "Custom curated compilation featuring your requested A.R. Rahman tracks.",
+        cover: "assets/AR_Rahman_At_The_‘Marvel_Anthem’_Launch_(3x4_cropped).jpg",
+        songIds: [29, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
+      });
+    } else if (!Array.isArray(arRahmanFolder.songIds) || arRahmanFolder.songIds.length === 0) {
+      arRahmanFolder.songIds = [29, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44];
+    }
+
+    const twoPointZeroFolder = folders.find(f => f.id === "folder_two_point_zero");
+    if (!twoPointZeroFolder) {
+      folders.push({
+        id: "folder_two_point_zero",
+        title: "2.0",
+        desc: "Custom folder featuring 2.0 soundtrack.",
+        cover: "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+        songIds: [29, 34, 35]
+      });
+    } else if (!Array.isArray(twoPointZeroFolder.songIds) || twoPointZeroFolder.songIds.length === 0) {
+      twoPointZeroFolder.songIds = [29, 34, 35];
+    }
+
+    const ambikapathyFolder = folders.find(f => f.id === "folder_ambikapathy");
+    if (!ambikapathyFolder) {
+      folders.push({
+        id: "folder_ambikapathy",
+        title: "Ambikapathy",
+        desc: "Custom folder featuring Ambikapathy soundtrack.",
+        cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        songIds: [36, 37, 38, 39, 40, 41, 42, 43, 44]
+      });
+    } else if (!Array.isArray(ambikapathyFolder.songIds) || ambikapathyFolder.songIds.length === 0) {
+      ambikapathyFolder.songIds = [36, 37, 38, 39, 40, 41, 42, 43, 44];
     }
 
     localStorage.setItem("spotify_folders", JSON.stringify(folders));
@@ -990,7 +1181,7 @@ function loadLocalStorage() {
         title: "Abi Hits",
         desc: "A curated collection of hits by Sai Abhyankkar.",
         cover: "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
-        songIds: [22, 23, 24, 25, 26, 27]
+        songIds: [22, 23, 24, 25, 26, 27, 9, 10, 11, 12, 13, 14]
       },
       {
         id: "folder_bachelor_love",
@@ -998,6 +1189,27 @@ function loadLocalStorage() {
         desc: "Custom curated collection containing your requested Bachelor Love tracks.",
         cover: "assets/image-1128572-x6b3324g19.avif",
         songIds: [28, 29, 30, 31, 32, 33]
+      },
+      {
+        id: "folder_ar_rahman",
+        title: "A.R. Rahman",
+        desc: "Custom curated compilation featuring your requested A.R. Rahman tracks.",
+        cover: "assets/AR_Rahman_At_The_‘Marvel_Anthem’_Launch_(3x4_cropped).jpg",
+        songIds: [29, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
+      },
+      {
+        id: "folder_two_point_zero",
+        title: "2.0",
+        desc: "Custom folder featuring 2.0 soundtrack.",
+        cover: "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+        songIds: [29, 34, 35]
+      },
+      {
+        id: "folder_ambikapathy",
+        title: "Ambikapathy",
+        desc: "Custom folder featuring Ambikapathy soundtrack.",
+        cover: "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        songIds: [36, 37, 38, 39, 40, 41, 42, 43, 44]
       }
     ];
     localStorage.setItem("spotify_folders", JSON.stringify(folders));

@@ -125,6 +125,48 @@
         "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781745798/Pavazha_Malli_Unplugged_eb8mse.mp3",
         "cover": "assets/is-sai-abhyankkar-being-experimental-or-just-wildly-v0-tds8hhr9fzng1.webp",
         "duration": "4:02"
+      },
+      {
+        "title": "Karuppa Kooda Va",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781589016/Karuppa_Kooda_Va_nrshhx.mp3",
+        "cover": "assets/photo 1.jpg",
+        "duration": "4:20"
+      },
+      {
+        "title": "Verappa",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588999/Verappa_xxktoz.mp3",
+        "cover": "assets/photo 1.jpg",
+        "duration": "3:52"
+      },
+      {
+        "title": "Verappa - Extended",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588994/Verappa_-_Extended_y7sk2d.mp3",
+        "cover": "assets/photo 1.jpg",
+        "duration": "5:05"
+      },
+      {
+        "title": "God Mode",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588976/God_Mode_fneyun.mp3",
+        "cover": "assets/photo 1.jpg",
+        "duration": "4:30"
+      },
+      {
+        "title": "Naanga Naalu Peru",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588973/Naanga_Naalu_Peru_sybigu.mp3",
+        "cover": "assets/photo 1.jpg",
+        "duration": "4:10"
+      },
+      {
+        "title": "God Mode Begins",
+        "artist": "Various Artists",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781588955/God_Mode_Begins_wubfbj.mp3",
+        "cover": "assets/photo 1.jpg",
+        "duration": "4:25"
       }
     ]
   },
@@ -175,6 +217,198 @@
         "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778448/Kavan-MassTamilan.fm_jmwixz.mp3",
         "cover": "assets/image-1128572-x6b3324g19.avif",
         "duration": "4:00"
+      }
+    ]
+  },
+  {
+    "id": "folder_ar_rahman",
+    "title": "A.R. Rahman",
+    "desc": "Custom curated compilation featuring your requested A.R. Rahman tracks.",
+    "cover": "assets/AR_Rahman_At_The_‘Marvel_Anthem’_Launch_(3x4_cropped).jpg",
+    "songs": [
+      {
+        "title": "Pachigalam Paravaigalam",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778495/Pachigalam-Paravaigalam-MassTamilan.fm_zv8aqu.mp3",
+        "cover": "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+        "duration": "3:45"
+      },
+      {
+        "title": "Endhira Logathu Sundhariye",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784777/Endhira-Logathu-Sundhariye-MassTamilan.com_ravqgh.mp3",
+        "cover": "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+        "duration": "5:30"
+      },
+      {
+        "title": "Raajali Nee Gaali",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784787/Raajali-Nee-Gaali-MassTamilan.com_wcp1cr.mp3",
+        "cover": "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+        "duration": "4:12"
+      },
+      {
+        "title": "Kalaarasiga",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784923/Kalaarasiga_pqc1wn.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:50"
+      },
+      {
+        "title": "Ambikapathy",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784900/Ambikapathy_h4kjl2.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "3:40"
+      },
+      {
+        "title": "Unnaal Unnaal",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784893/Unnaal-Unnaal_t3rfhk.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "5:01"
+      },
+      {
+        "title": "Parakka Seivaai",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784878/Parakka-Seivaai_h6lsus.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:24"
+      },
+      {
+        "title": "Oliyaaga Vandhaai",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784876/Oliyaaga-Vandhaai_qi8ks4.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:15"
+      },
+      {
+        "title": "Solvadhai Seidhu Mudippom",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784842/Solvadhai-Seidhu-Mudippom_rkkysc.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "3:58"
+      },
+      {
+        "title": "Kanaave Kanaave",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784835/Kanaave-Kanaave_vgvoen.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:47"
+      },
+      {
+        "title": "Paarkaadhey Oru Madhiri",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784825/Paarkaadhey-Oru-Madhiri_qh5vet.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:30"
+      },
+      {
+        "title": "The Land Of Shiva",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784796/The-Land-Of-Shiva_hcpxmw.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "3:10"
+      }
+    ]
+  },
+  {
+    "id": "folder_two_point_zero",
+    "title": "2.0",
+    "desc": "Custom folder featuring 2.0 soundtrack.",
+    "cover": "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+    "songs": [
+      {
+        "title": "Pachigalam Paravaigalam",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781778495/Pachigalam-Paravaigalam-MassTamilan.fm_zv8aqu.mp3",
+        "cover": "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+        "duration": "3:45"
+      },
+      {
+        "title": "Endhira Logathu Sundhariye",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784777/Endhira-Logathu-Sundhariye-MassTamilan.com_ravqgh.mp3",
+        "cover": "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+        "duration": "5:30"
+      },
+      {
+        "title": "Raajali Nee Gaali",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784787/Raajali-Nee-Gaali-MassTamilan.com_wcp1cr.mp3",
+        "cover": "assets/MV5BYjE1YTk1Y2ItZjQ1Ny00Y2RmLTg5OTYtYWFjZTdlMTFmYTEyXkEyXkFqcGc@._V1_QL75_UX244.5_.jpg",
+        "duration": "4:12"
+      }
+    ]
+  },
+  {
+    "id": "folder_ambikapathy",
+    "title": "Ambikapathy",
+    "desc": "Custom folder featuring Ambikapathy soundtrack.",
+    "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+    "songs": [
+      {
+        "title": "Kalaarasiga",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784923/Kalaarasiga_pqc1wn.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:50"
+      },
+      {
+        "title": "Ambikapathy",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784900/Ambikapathy_h4kjl2.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "3:40"
+      },
+      {
+        "title": "Unnaal Unnaal",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784893/Unnaal-Unnaal_t3rfhk.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "5:01"
+      },
+      {
+        "title": "Parakka Seivaai",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784878/Parakka-Seivaai_h6lsus.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:24"
+      },
+      {
+        "title": "Oliyaaga Vandhaai",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784876/Oliyaaga-Vandhaai_qi8ks4.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:15"
+      },
+      {
+        "title": "Solvadhai Seidhu Mudippom",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784842/Solvadhai-Seidhu-Mudippom_rkkysc.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "3:58"
+      },
+      {
+        "title": "Kanaave Kanaave",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784835/Kanaave-Kanaave_vgvoen.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:47"
+      },
+      {
+        "title": "Paarkaadhey Oru Madhiri",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784825/Paarkaadhey-Oru-Madhiri_qh5vet.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "4:30"
+      },
+      {
+        "title": "The Land Of Shiva",
+        "artist": "A.R. Rahman",
+        "url": "https://res.cloudinary.com/deogr4d1g/video/upload/q_auto/f_auto/v1781784796/The-Land-Of-Shiva_hcpxmw.mp3",
+        "cover": "assets/G Ambikapathy-32c07f90-6889-11f0-bd19-a514e6f6afb9.jpg",
+        "duration": "3:10"
       }
     ]
   }
